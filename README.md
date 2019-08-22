@@ -9,12 +9,11 @@ Installation
 2) Install python packages: Numpy, Sklearn, Cython
 
 3) Build PyDC executable file
-
-	  $ cd yapInterface
-    
-   	$ python setup.py build_ext --inplace
-    
-   	$ mv yapWrapper.so ../core/
+```
+$ cd yapInterface
+$ python setup.py build_ext --inplace
+$ mv yapWrapper.so ../core/
+```
    	
 Execution 
 =========
