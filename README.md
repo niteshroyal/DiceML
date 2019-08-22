@@ -16,7 +16,7 @@ Installation
    	
 Execution 
 =========
-
+```
 1. Learning a distributional program from deterministic data. An example of declarative bias in shown in file '../data/FinancialData.pl'
 ```python
     ## Output DC program
