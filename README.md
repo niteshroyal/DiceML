@@ -24,6 +24,8 @@ Execution
 1. Learning a distributional program from deterministic data. An example of declarative bias in shown in file '../data/FinancialData.pl'
 
 ```python
+ from core.TreeLearnerProbabilistic import TreeLearnerProbabilistic
+ 
  ## Output DC program
  outputFile = '../data/MyDCRules.pl'
  f = open(outputFile, 'w')
@@ -43,6 +45,8 @@ Execution
 2. Learning a distributional program from deterministic/probabilistic data as well as background theory. Two input files are needed for this case.
 
 ```python
+ from core.TreeLearnerProbabilistic import TreeLearnerProbabilistic
+ 
  ## Output DC program
  outputFile = '../data/MyDCRules.pl'
  f = open(outputFile, 'w')
