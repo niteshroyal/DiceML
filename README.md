@@ -20,7 +20,7 @@ Execution
 =========
 
 1) Learning a distributional program from deterministic data
-
+```python
     outputFile = '../data/MyDCRules.pl'
     f = open(outputFile, 'w')
     
@@ -33,9 +33,11 @@ Execution
         rule = translateObj.translate(rule)
         f.write(rule + '\n')
     f.close()
+```
+
 
 2) Learning a distributional program from deterministic/probabilistic data as well as background theory
-
+```python
     outputFile = '../data/MyDCRules.pl'
     f = open(outputFile, 'w')
     
@@ -48,3 +50,4 @@ Execution
         rule = translateObj.translate(rule)
         f.write(rule + '\n')
     f.close()
+```
