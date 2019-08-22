@@ -16,9 +16,9 @@ Installation
    	
 Execution 
 =========
-```
+
 1. Learning a distributional program from deterministic data. An example of declarative bias in shown in file '../data/FinancialData.pl'
-```
+
 ```python
     ## Output DC program
     outputFile = '../data/MyDCRules.pl'
@@ -35,9 +35,8 @@ Execution
     f.close()
 ```
 
-```
 2. Learning a distributional program from deterministic/probabilistic data as well as background theory. Two files are needed for this case.
-```
+
 ```python
     ## Output DC program
     outputFile = '../data/MyDCRules.pl'
