@@ -44,7 +44,7 @@ Execution
  f = open(outputFile, 'w')
 
  ## Input DC program and a helper Prolog program
- obj = TreeLearnerProbabilistic('../data/FinancialData_Enumerated.pl', '../data/FinancialDataDC.pl','')
+ obj = TreeLearnerProbabilistic('../data/FinancialData_Enumerated.pl','../data/FinancialDataDC.pl','')
 
  obj.learnRules()
  translateObj = obj.interface.translator
