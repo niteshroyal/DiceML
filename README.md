@@ -3,7 +3,7 @@
 * It can make use of background knowledge (if available) written in DC language.
 * Performs Stochastic EM if some fields are missing in the relational database. 
 
-...The code is in beta, if you need help or find a bug please write an [issue](https://github.com/niteshroyal/DistributionalProgramSynthesis/issues) or contact me at nitesh.kr369 (_DOT_) 30 (AT) gmail (_DOT_) com
+The code is in beta, if you need help or find a bug please write an [issue](https://github.com/niteshroyal/DistributionalProgramSynthesis/issues) or contact me at niteshroyal (_DOT_) 30 (AT) gmail (_DOT_) com
 
 Installation
 ============
