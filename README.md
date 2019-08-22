@@ -1,6 +1,6 @@
 # Distributional Program Synthesis
 * Learns a joint probabilistic relational model in the form of the Distributional Program for a relational database.
-* It can make use of background knowledge written in DC language.
+* It can make use of background knowledge (if available) written in DC language.
 * Performs Stochastic EM if some fields are missing in the relational database. 
 
 Installation
