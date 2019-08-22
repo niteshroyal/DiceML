@@ -11,7 +11,7 @@ from FeatureSpace import FeatureCreator
 from YapPrologInterface import YapPrologInterface
 from ScoreFinderProbabilistic import ScoreFinderProbabilistic
 
-class TreeLearnerProbabilistic(object):
+class DCLearner(object):
     
     EPSILON_SCORE = 5 #Difference in BIC score, very low value will lead to over-fitting and very high value will lead to under-fitting
     MIN_NUMBER_OF_DATAPOINT_AT_LEAF = 10 #Minimum number of substitutions in the leaf. 
@@ -688,10 +688,10 @@ if __name__ == '__main__':
     f = open(outputFile, 'w')
     
     ## To run in deterministic mode
-    obj = TreeLearnerProbabilistic('../data/FinancialData.pl', '', '')
+    obj = DCLearner('../data/FinancialData.pl', '', '')
     
     ## To run in probabilistic mode 
-    #obj = TreeLearnerProbabilistic('../data/FinancialData_Enumerated.pl', '../data/FinancialDataDC.pl', '')
+    #obj = DCLearner('../data/FinancialData_Enumerated.pl', '../data/FinancialDataDC.pl', '')
     
     obj.learnRules()
     translateObj = obj.interface.translator

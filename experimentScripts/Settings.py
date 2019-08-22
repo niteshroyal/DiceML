@@ -10,7 +10,7 @@ import copy, math
 from os import listdir
 from os.path import isfile, join
 from core.YapPrologInterface import YapPrologInterface
-from core.TreeLearnerProbabilistic import TreeLearnerProbabilistic
+from core.DCLearner import DCLearner
 from core.TranslateToDC import TranslateToDC
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
@@ -3229,7 +3229,7 @@ class Test():
     def generateEnsembleOfDLTs(self, fileName, trainFacts, outputFile):
         self.generatePrologFile(fileName, trainFacts)
         f = open(outputFile, 'w')
-        obj = TreeLearnerProbabilistic(fileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+        obj = DCLearner(fileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
         obj.learnRules()
         obj1 = TranslateToDC()
         dcRules = []
@@ -3253,7 +3253,7 @@ class Test():
                 
                 self.generatePrologFile(prologFileName, trainFacts, targetVariable=randVariable)
                 f = open(treeOutputFile, 'w')
-                obj = TreeLearnerProbabilistic(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+                obj = DCLearner(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
                 obj.learnRules()
                 obj1 = TranslateToDC()
                 dcRules = []
@@ -3288,7 +3288,7 @@ class Test():
                 
                 self.generatePrologFile(prologFileName, trainFacts, targetVariable=randVariable)
                 f = open(treeOutputFile, 'w')
-                obj = TreeLearnerProbabilistic(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+                obj = DCLearner(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
                 obj.learnRules()
                 obj1 = TranslateToDC()
                 dcRules = []

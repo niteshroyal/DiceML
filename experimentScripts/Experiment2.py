@@ -12,7 +12,7 @@ from core.TranslateToDC import TranslateToDC
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import roc_auc_score
-from core.TreeLearnerProbabilistic import TreeLearnerProbabilistic
+from core.DCLearner import DCLearner
 
 from Settings import Test
 from Settings import RANDOM_VARIABLE_PREDICATE_TYPE, RANDOM_VARIABLE_PREDICATE, DATABASE_NAME, RANDOM_VARIABLE_PREDICATE_RANGE, DECLARATIVE_BIAS_ORDERED, PROLOG_PROGRAM_HEADER, DC_PROGRAM_HEADER, DC_PROGRAM_DATA_DEPENDENT_RELATION
@@ -130,7 +130,7 @@ def generateDLTsFromValidation(numOfSamples, validationFolder, prologValidationF
     listOfEnumeration = []
     validateFacts = exp1Obj.getListOfPredicatesInFolder(validationFolder)
     generatePrologFile(prologValidationFile, validateFacts, targetVariable=missingPredicate)
-    obj = TreeLearnerProbabilistic(prologValidationFile, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+    obj = DCLearner(prologValidationFile, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
     obj.learnRules()
     obj1 = TranslateToDC()
     dcRules = []
@@ -537,7 +537,7 @@ def experiment2b(numOfSamples, trainingFolder, validationFolder, testFolder, pro
             if mode == 'mode':
                 generateDCPrologFile(prologTrainingFileName, dcTrainingFile, newTrainFacts, [], [], listOfModeOfDistribtion, background, mode, targetVariable=randVariable)
                 f = open(treeOutputFileTraining, 'w')
-                obj = TreeLearnerProbabilistic(prologTrainingFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+                obj = DCLearner(prologTrainingFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
                 obj.learnRules()
                 obj1 = TranslateToDC()
                 dcRules = []
@@ -553,7 +553,7 @@ def experiment2b(numOfSamples, trainingFolder, validationFolder, testFolder, pro
             elif mode == 'probabilistic':
                 generateDCPrologFile(prologTrainingFileName, dcTrainingFile, newTrainFacts, listOfDistributionalFacts, listOfEnumeration, [], background, mode, targetVariable=randVariable)
                 f = open(treeOutputFileTraining, 'w')
-                obj = TreeLearnerProbabilistic(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+                obj = DCLearner(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
                 obj.learnRules()
                 obj1 = TranslateToDC()
                 dcRules = []
@@ -572,7 +572,7 @@ def experiment2b(numOfSamples, trainingFolder, validationFolder, testFolder, pro
                 generateDCPrologFile(prologTrainingFileName, dcTrainingFile, newTrainFacts, [], [], [], background, mode, targetVariable=randVariable)
 
                 f = open(treeOutputFileTraining, 'w')
-                obj = TreeLearnerProbabilistic(prologTrainingFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+                obj = DCLearner(prologTrainingFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
                 obj.learnRules()
                 obj1 = TranslateToDC()
                 dcRules = []
@@ -590,7 +590,7 @@ def experiment2b(numOfSamples, trainingFolder, validationFolder, testFolder, pro
             elif mode == 'complete':
                 generateDCPrologFile(prologTrainingFileName, dcTrainingFile, trainFacts, [], [], [], background, mode, targetVariable=randVariable)
                 f = open(treeOutputFileTraining, 'w')
-                obj = TreeLearnerProbabilistic(prologTrainingFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
+                obj = DCLearner(prologTrainingFileName, '', '', RANDOM_VARIABLE_PREDICATE[DATABASE_NAME])
                 obj.learnRules()
                 obj1 = TranslateToDC()
                 dcRules = []

@@ -9,7 +9,7 @@ from core.TranslateToDC import TranslateToDC
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import roc_auc_score
-from core.TreeLearnerProbabilistic import TreeLearnerProbabilistic
+from core.DCLearner import DCLearner
 
 from Experiment1 import Experiment1b
 from Settings import RANDOM_VARIABLE_PREDICATE_TYPE, RANDOM_VARIABLE_PREDICATE, RANDOM_VARIABLE_PREDICATE_RANGE,\
@@ -630,7 +630,7 @@ class StochasticEM():
 
         if mode == 'em':
             self.generateDCPrologFile(prologTrainingFileName, dcTrainingFile, mode, targetVariable=RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
-            treeLearnerObject = TreeLearnerProbabilistic(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
+            treeLearnerObject = DCLearner(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
             translateRuleObject = TranslateToDC()
             translateRuleObject.setRandomVariablePredicates(RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
             self.setDCToOnlySample(treeLearnerObject.interface, 'true')
@@ -640,7 +640,7 @@ class StochasticEM():
             self.findTestAccuracy(treeLearnerObject.interface, testFacts, [testPredicate], newBackgroundTheory['theory'], newBackgroundTheory['dependency'])
         elif mode == 'partial':
             self.generateDCPrologFile(prologTrainingFileName, dcTrainingFile, mode, targetVariable=[testPredicate])
-            obj = TreeLearnerProbabilistic(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
+            obj = DCLearner(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
             self.setDCToOnlySample(obj.interface, 'false')
             self.assertPrologTrainFactsAtEnd(newTrainFacts, obj.interface)
             obj.runProbMode = False
@@ -664,7 +664,7 @@ class StochasticEM():
             self.findTestAccuracy(obj.interface, testFacts, [testPredicate], theory['theory'], theory['dependency'])
         elif mode == 'complete':
             self.generateDCPrologFile(prologTrainingFileName, dcTrainingFile, mode, targetVariable=[testPredicate])
-            obj = TreeLearnerProbabilistic(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
+            obj = DCLearner(prologTrainingFileName, dcTrainingFile, '', RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
             self.setDCToOnlySample(obj.interface, 'false')
             self.assertPrologTrainFactsAtEnd(trainFacts, obj.interface)
             obj.runProbMode = False

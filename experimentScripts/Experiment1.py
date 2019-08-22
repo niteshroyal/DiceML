@@ -10,7 +10,7 @@ import math
 from os import listdir
 from os.path import isfile, join
 from core.YapPrologInterface import YapPrologInterface
-from core.TreeLearnerProbabilistic import TreeLearnerProbabilistic
+from core.DCLearner import DCLearner
 from core.TranslateToDC import TranslateToDC
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
@@ -614,7 +614,7 @@ class Experiment1b():
     def generateEnsembleOfDLTs(self, fileName, trainFacts, outputFile):
         self.generatePrologFile(fileName, trainFacts)
         f = open(outputFile, 'w')
-        obj = TreeLearnerProbabilistic(fileName, '', '', RANDOM_VARIABLE_PREDICATE[self.databaseName])
+        obj = DCLearner(fileName, '', '', RANDOM_VARIABLE_PREDICATE[self.databaseName])
         obj.learnRules()
         obj1 = TranslateToDC()
         dcRules = []
@@ -643,7 +643,7 @@ class Experiment1b():
                 prologRules = []
                 prologDependencyStructureList = []
                 self.generatePrologFile(prologFileName, trainFacts, targetVariable=attributeRelatedPredicates)
-                obj = TreeLearnerProbabilistic(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[self.databaseName])
+                obj = DCLearner(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[self.databaseName])
                 obj.learnRules()
                 prologRules = prologRules + obj.rules
                 prologDependencyStructureList.append(obj.generateDependencyStructureOfRules(obj.rulesFragmented)) 
@@ -733,7 +733,7 @@ class Experiment1b():
                 prologRules = []
                 prologDependencyStructureList = []
                 self.generatePrologFile(prologFileName, trainFacts, targetVariable=attributeRelatedPredicates)
-                obj = TreeLearnerProbabilistic(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[self.databaseName])
+                obj = DCLearner(prologFileName, '', '', RANDOM_VARIABLE_PREDICATE[self.databaseName])
                 obj.learnRules()
                 prologRules = prologRules + obj.rules
                 prologDependencyStructureList.append(obj.generateDependencyStructureOfRules(obj.rulesFragmented)) 
