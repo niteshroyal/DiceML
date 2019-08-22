@@ -1,0 +1,50 @@
+In file included from ./bfl/wrappers/matrix/matrix_BOOST.h:24:0,
+                 from ./bfl/wrappers/matrix/matrix_wrapper.h:293,
+                 from ./bfl/wrappers/matrix/vector_BOOST.h:26,
+                 from ./bfl/wrappers/matrix/vector_wrapper.h:243,
+                 from sampling.cpp:10:
+./bfl/wrappers/matrix/../../bfl_constants.h:23:0: warning: ignoring #pragma warning  [-Wunknown-pragmas]
+ #pragma warning( disable : 4996)
+ ^
+sampling.cpp: In function ‘YAP_Bool pl_deletemap()’:
+sampling.cpp:212:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+sampling.cpp: In function ‘YAP_Bool pl_proposalDistribution()’:
+sampling.cpp:369:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int a=1;a<=A.rows();a++)
+               ^
+sampling.cpp:371:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int b=1;b<=A.rows();b++)
+                ^
+sampling.cpp:394:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0;i<A.rows();i++)
+               ^
+sampling.cpp:297:11: warning: variable ‘head’ set but not used [-Wunused-but-set-variable]
+  YAP_Term head, list = YAP_ARG1;
+           ^
+sampling.cpp: In function ‘YAP_Bool pl_matrixproduct()’:
+sampling.cpp:509:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int a=1;a<=A.rows();a++)
+               ^
+sampling.cpp:511:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+   for(int b=1;b<=A.rows();b++)
+                ^
+sampling.cpp:532:15: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+  for(int i=0;i<A.rows();i++)
+               ^
+sampling.cpp:479:11: warning: variable ‘head’ set but not used [-Wunused-but-set-variable]
+  YAP_Term head, list = YAP_ARG1;
+           ^
+sampling.cpp: In function ‘YAP_Bool pl_addvaluemap()’:
+sampling.cpp:182:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+sampling.cpp: At global scope:
+sampling.cpp:79:17: warning: ‘YAP_Bool pl_test()’ defined but not used [-Wunused-function]
+ static YAP_Bool pl_test(void)
+                 ^
+sampling.cpp:609:17: warning: ‘YAP_Bool pl_multivariateGaussian_cut()’ defined but not used [-Wunused-function]
+ static YAP_Bool pl_multivariateGaussian_cut(void)
+                 ^
+yes
