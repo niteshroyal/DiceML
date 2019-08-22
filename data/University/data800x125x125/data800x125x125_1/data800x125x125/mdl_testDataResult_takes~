@@ -1,0 +1,1657 @@
+NR TRAINING INSTANCE (with subsampling): 107389
+NR TRAINING INSTANCE (without subsampling): 73663
+NR TEST INSTANCE (with subsampling): 107075
+NR TEST INSTANCE (without subsampling): 73326
+NR validation INSTANCES (with subsampling): 115795
+NR validation INSTANCES (without subsampling): 79953
+NR INSTANCES (with subsampling) 214464
+NR INSTANCES (without subsampling) 146989
+Algorithm parameters: Structure learning scoring is: MDL Is it with feature length: true
+ Discretization Flag: false
+------------------------------------------------
+0 [0] Value([] [satisfaction(S,C) ]) ID: 6
+1 [1] Exists([satisfaction(S,C,low) ] []) ID: 7
+2 [2] Exists([satisfaction(S,C,mid) ] []) ID: 8
+3 [3] Exists([satisfaction(S,C,high) ] []) ID: 9
+4 [4] Value([] [grade(S,C) ]) ID: 10
+5 [5] Exists([grade(S,C,low) ] []) ID: 11
+6 [6] Exists([grade(S,C,mid) ] []) ID: 12
+7 [7] Exists([grade(S,C,high) ] []) ID: 13
+8 [8] Value([] [intelligence(S) ]) ID: 14
+9 [9] Exists([teaches(P,C) ] []) ID: 15
+10 [10] Count([teaches(P,C) ] []) ID: 16
+11 [11] Value([] [nrhours(C) ]) ID: 17
+12 [12] Value([] [difficulty(C) ]) ID: 18
+13 [13] Exists([difficulty(C,easy) ] []) ID: 19
+14 [14] Exists([difficulty(C,medium) ] []) ID: 20
+15 [15] Exists([difficulty(C,hard) ] []) ID: 21
+16 [16] Exists([friend(S,S1) ] []) ID: 22
+17 [17] Count([friend(S,S1) ] []) ID: 23
+18 [18] Value([satisfaction(S,C,low) ] [grade(S,C) ]) ID: 24
+19 [19] Exists([satisfaction(S,C,low) , grade(S,C,low) ] []) ID: 25
+20 [20] Exists([satisfaction(S,C,low) , grade(S,C,mid) ] []) ID: 26
+21 [21] Exists([satisfaction(S,C,low) , grade(S,C,high) ] []) ID: 27
+22 [22] Value([satisfaction(S,C,low) ] [intelligence(S) ]) ID: 28
+23 [23] Exists([satisfaction(S,C,low) , teaches(P,C) ] []) ID: 29
+24 [24] Count([satisfaction(S,C,low) , teaches(P,C) ] []) ID: 30
+25 [25] Value([satisfaction(S,C,low) ] [nrhours(C) ]) ID: 31
+26 [26] Value([satisfaction(S,C,low) ] [difficulty(C) ]) ID: 32
+27 [27] Exists([satisfaction(S,C,low) , difficulty(C,easy) ] []) ID: 33
+28 [28] Exists([satisfaction(S,C,low) , difficulty(C,medium) ] []) ID: 34
+29 [29] Exists([satisfaction(S,C,low) , difficulty(C,hard) ] []) ID: 35
+30 [30] Exists([satisfaction(S,C,low) , friend(S,S1) ] []) ID: 36
+31 [31] Count([satisfaction(S,C,low) , friend(S,S1) ] []) ID: 37
+32 [32] Value([satisfaction(S,C,mid) ] [grade(S,C) ]) ID: 38
+33 [33] Value([satisfaction(S,C,mid) ] [intelligence(S) ]) ID: 39
+34 [34] Exists([satisfaction(S,C,mid) , teaches(P,C) ] []) ID: 40
+35 [35] Count([satisfaction(S,C,mid) , teaches(P,C) ] []) ID: 41
+36 [36] Value([satisfaction(S,C,mid) ] [nrhours(C) ]) ID: 42
+37 [37] Exists([satisfaction(S,C,mid) , difficulty(C,hard) ] []) ID: 43
+38 [38] Exists([satisfaction(S,C,mid) , friend(S,S1) ] []) ID: 44
+39 [39] Count([satisfaction(S,C,mid) , friend(S,S1) ] []) ID: 45
+40 [40] Value([satisfaction(S,C,high) ] [intelligence(S) ]) ID: 46
+41 [41] Exists([satisfaction(S,C,high) , teaches(P,C) ] []) ID: 47
+42 [42] Count([satisfaction(S,C,high) , teaches(P,C) ] []) ID: 48
+43 [43] Value([satisfaction(S,C,high) ] [nrhours(C) ]) ID: 49
+44 [44] Exists([satisfaction(S,C,high) , difficulty(C,hard) ] []) ID: 50
+45 [45] Exists([satisfaction(S,C,high) , friend(S,S1) ] []) ID: 51
+46 [46] Count([satisfaction(S,C,high) , friend(S,S1) ] []) ID: 52
+47 [47] Exists([grade(S,C,low) , teaches(P,C) ] []) ID: 53
+48 [48] Count([grade(S,C,low) , teaches(P,C) ] []) ID: 54
+49 [49] Exists([grade(S,C,low) , difficulty(C,hard) ] []) ID: 55
+50 [50] Exists([grade(S,C,mid) , difficulty(C,hard) ] []) ID: 56
+51 [51] Exists([grade(S,C,high) , difficulty(C,hard) ] []) ID: 57
+52 [52] Exists([friend(S,S1) , takes(S1,C) ] []) ID: 58
+53 [53] Count([friend(S,S1) , takes(S1,C) ] []) ID: 59
+54 [54] Value([satisfaction(S,C,low) , grade(S,C,low) ] [intelligence(S) ]) ID: 60
+55 [55] Exists([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] []) ID: 61
+56 [56] Count([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] []) ID: 62
+57 [57] Value([satisfaction(S,C,low) , grade(S,C,low) ] [nrhours(C) ]) ID: 63
+58 [58] Value([satisfaction(S,C,low) , grade(S,C,low) ] [difficulty(C) ]) ID: 64
+59 [59] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,easy) ] []) ID: 65
+60 [60] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,medium) ] []) ID: 66
+61 [61] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,hard) ] []) ID: 67
+62 [62] Exists([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] []) ID: 68
+63 [63] Count([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] []) ID: 69
+64 [64] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [intelligence(S) ]) ID: 70
+65 [65] Exists([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] []) ID: 71
+66 [66] Count([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] []) ID: 72
+67 [67] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [nrhours(C) ]) ID: 73
+68 [68] Exists([satisfaction(S,C,low) , grade(S,C,mid) , difficulty(C,hard) ] []) ID: 74
+69 [69] Exists([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] []) ID: 75
+70 [70] Count([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] []) ID: 76
+71 [71] Value([satisfaction(S,C,low) , grade(S,C,high) ] [intelligence(S) ]) ID: 77
+72 [72] Exists([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] []) ID: 78
+73 [73] Count([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] []) ID: 79
+74 [74] Value([satisfaction(S,C,low) , grade(S,C,high) ] [nrhours(C) ]) ID: 80
+75 [75] Exists([satisfaction(S,C,low) , grade(S,C,high) , difficulty(C,hard) ] []) ID: 81
+76 [76] Exists([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] []) ID: 82
+77 [77] Count([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] []) ID: 83
+78 [78] Average([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ]) ID: 84
+79 [79] Max([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ]) ID: 85
+80 [80] Min([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ]) ID: 86
+81 [81] Exists([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] []) ID: 87
+82 [82] Count([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] []) ID: 88
+83 [83] Exists([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] []) ID: 89
+84 [84] Count([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] []) ID: 90
+85 [85] Exists([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] []) ID: 91
+86 [86] Count([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] []) ID: 92
+87 [87] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] []) ID: 93
+88 [88] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] []) ID: 94
+89 [89] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] []) ID: 95
+90 [90] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] []) ID: 96
+91 [91] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] []) ID: 97
+92 [92] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] []) ID: 98
+93 [93] Mode([satisfaction(S,C,low) , friend(S,S1) ] [grade(S1,C) ]) ID: 99
+94 [94] Average([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ]) ID: 100
+95 [95] Max([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ]) ID: 101
+96 [96] Min([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ]) ID: 102
+97 [97] Exists([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] []) ID: 103
+98 [98] Count([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] []) ID: 104
+99 [99] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , grade(S,C,high) ] []) ID: 105
+100 [100] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] []) ID: 106
+101 [101] Count([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] []) ID: 107
+102 [102] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] []) ID: 108
+103 [103] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] []) ID: 109
+104 [104] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] []) ID: 110
+105 [105] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] []) ID: 111
+106 [106] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] []) ID: 112
+107 [107] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] []) ID: 113
+108 [108] Mode([satisfaction(S,C,mid) , friend(S,S1) ] [grade(S1,C) ]) ID: 114
+109 [109] Average([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ]) ID: 115
+110 [110] Max([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ]) ID: 116
+111 [111] Min([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ]) ID: 117
+112 [112] Exists([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []) ID: 118
+113 [113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []) ID: 119
+114 [114] Exists([satisfaction(S,C,high) , difficulty(C,hard) , grade(S,C,high) ] []) ID: 120
+115 [115] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] []) ID: 121
+116 [116] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] []) ID: 122
+117 [117] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] []) ID: 123
+118 [118] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] []) ID: 124
+119 [119] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] []) ID: 125
+120 [120] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] []) ID: 126
+121 [121] Mode([satisfaction(S,C,high) , friend(S,S1) ] [grade(S1,C) ]) ID: 127
+122 [122] Average([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ]) ID: 128
+123 [123] Max([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ]) ID: 129
+124 [124] Min([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ]) ID: 130
+125 [125] Exists([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] []) ID: 131
+126 [126] Count([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] []) ID: 132
+127 [127] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] []) ID: 133
+128 [128] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] []) ID: 134
+129 [129] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] []) ID: 135
+130 [130] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] []) ID: 136
+131 [131] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] []) ID: 137
+132 [132] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] []) ID: 138
+133 [133] Mode([friend(S,S1) , takes(S1,C) ] [satisfaction(S1,C) ]) ID: 139
+134 [134] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] []) ID: 140
+135 [135] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] []) ID: 141
+136 [136] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] []) ID: 142
+137 [137] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] []) ID: 143
+138 [138] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] []) ID: 144
+139 [139] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] []) ID: 145
+140 [140] Mode([friend(S,S1) , takes(S1,C) ] [grade(S1,C) ]) ID: 146
+141 [141] Average([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ]) ID: 147
+142 [142] Max([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ]) ID: 148
+143 [143] Min([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ]) ID: 149
+144 [144] Count([friend(S,S1) , takes(S1,C) ] []) ID: 3
+145 [145] Mode([friend(S,S1) ] [satisfaction(S1,C) ]) ID: 4
+PRIOR SCORE: Head: takes(S,C)Features: []
+ -55145.84332592535
+
+ COMPARING NEW PROPOSED BEST SCORE TO CURRENT: -55145.84332592535>=-Infinity 
+
+ALL REFINEMENTS: FOR  Head: takes(S,C)Features: []
+ 
+[Head: takes(S,C)Features: [[0] Value([] [satisfaction(S,C) ])]
+, Head: takes(S,C)Features: [[1] Exists([satisfaction(S,C,low) ] [])]
+, Head: takes(S,C)Features: [[2] Exists([satisfaction(S,C,mid) ] [])]
+, Head: takes(S,C)Features: [[3] Exists([satisfaction(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[4] Value([] [grade(S,C) ])]
+, Head: takes(S,C)Features: [[5] Exists([grade(S,C,low) ] [])]
+, Head: takes(S,C)Features: [[6] Exists([grade(S,C,mid) ] [])]
+, Head: takes(S,C)Features: [[7] Exists([grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[8] Value([] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[9] Exists([teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[10] Count([teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[11] Value([] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[12] Value([] [difficulty(C) ])]
+, Head: takes(S,C)Features: [[13] Exists([difficulty(C,easy) ] [])]
+, Head: takes(S,C)Features: [[14] Exists([difficulty(C,medium) ] [])]
+, Head: takes(S,C)Features: [[15] Exists([difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[16] Exists([friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[17] Count([friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[18] Value([satisfaction(S,C,low) ] [grade(S,C) ])]
+, Head: takes(S,C)Features: [[19] Exists([satisfaction(S,C,low) , grade(S,C,low) ] [])]
+, Head: takes(S,C)Features: [[20] Exists([satisfaction(S,C,low) , grade(S,C,mid) ] [])]
+, Head: takes(S,C)Features: [[21] Exists([satisfaction(S,C,low) , grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[22] Value([satisfaction(S,C,low) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[23] Exists([satisfaction(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[24] Count([satisfaction(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[25] Value([satisfaction(S,C,low) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[26] Value([satisfaction(S,C,low) ] [difficulty(C) ])]
+, Head: takes(S,C)Features: [[27] Exists([satisfaction(S,C,low) , difficulty(C,easy) ] [])]
+, Head: takes(S,C)Features: [[28] Exists([satisfaction(S,C,low) , difficulty(C,medium) ] [])]
+, Head: takes(S,C)Features: [[29] Exists([satisfaction(S,C,low) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[30] Exists([satisfaction(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[31] Count([satisfaction(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[32] Value([satisfaction(S,C,mid) ] [grade(S,C) ])]
+, Head: takes(S,C)Features: [[33] Value([satisfaction(S,C,mid) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[34] Exists([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[35] Count([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[36] Value([satisfaction(S,C,mid) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[37] Exists([satisfaction(S,C,mid) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[38] Exists([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[39] Count([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[40] Value([satisfaction(S,C,high) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[41] Exists([satisfaction(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[42] Count([satisfaction(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[43] Value([satisfaction(S,C,high) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[44] Exists([satisfaction(S,C,high) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[45] Exists([satisfaction(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[46] Count([satisfaction(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[47] Exists([grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[48] Count([grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[49] Exists([grade(S,C,low) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[50] Exists([grade(S,C,mid) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[51] Exists([grade(S,C,high) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[52] Exists([friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[53] Count([friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[54] Value([satisfaction(S,C,low) , grade(S,C,low) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[55] Exists([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[56] Count([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[57] Value([satisfaction(S,C,low) , grade(S,C,low) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[58] Value([satisfaction(S,C,low) , grade(S,C,low) ] [difficulty(C) ])]
+, Head: takes(S,C)Features: [[59] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,easy) ] [])]
+, Head: takes(S,C)Features: [[60] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,medium) ] [])]
+, Head: takes(S,C)Features: [[61] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[62] Exists([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[63] Count([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[64] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[65] Exists([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[66] Count([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[67] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[68] Exists([satisfaction(S,C,low) , grade(S,C,mid) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[69] Exists([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[70] Count([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[71] Value([satisfaction(S,C,low) , grade(S,C,high) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[72] Exists([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[73] Count([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[74] Value([satisfaction(S,C,low) , grade(S,C,high) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[75] Exists([satisfaction(S,C,low) , grade(S,C,high) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[76] Exists([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[77] Count([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[78] Average([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+, Head: takes(S,C)Features: [[79] Max([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+, Head: takes(S,C)Features: [[80] Min([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+, Head: takes(S,C)Features: [[81] Exists([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[82] Count([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[83] Exists([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[84] Count([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[85] Exists([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[86] Count([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[87] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[88] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[89] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[90] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[91] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[92] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[93] Mode([satisfaction(S,C,low) , friend(S,S1) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[94] Average([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[95] Max([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[96] Min([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[97] Exists([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[98] Count([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[99] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[100] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[101] Count([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[102] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[103] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[104] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[105] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[106] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[107] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[108] Mode([satisfaction(S,C,mid) , friend(S,S1) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[109] Average([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[110] Max([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[111] Min([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[112] Exists([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[114] Exists([satisfaction(S,C,high) , difficulty(C,hard) , grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[115] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[116] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[117] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[118] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[119] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[120] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[121] Mode([satisfaction(S,C,high) , friend(S,S1) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[122] Average([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[123] Max([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[124] Min([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[125] Exists([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[126] Count([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[127] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[128] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[129] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[130] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[131] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[132] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[133] Mode([friend(S,S1) , takes(S1,C) ] [satisfaction(S1,C) ])]
+, Head: takes(S,C)Features: [[134] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[135] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[136] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[137] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[138] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[139] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[140] Mode([friend(S,S1) , takes(S1,C) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[141] Average([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[142] Max([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[143] Min([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[144] Count([friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[145] Mode([friend(S,S1) ] [satisfaction(S1,C) ])]
+]
+NR Missed instances LogReg: 21468
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[0] Value([] [satisfaction(S,C) ])]
+=-422680.31235959067
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[1] Exists([satisfaction(S,C,low) ] [])]
+=-266163.0809300611
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[2] Exists([satisfaction(S,C,mid) ] [])]
+=-300498.23472962296
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[3] Exists([satisfaction(S,C,high) ] [])]
+=-250699.15487567388
+
+NR Missed instances LogReg: 21468
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[4] Value([] [grade(S,C) ])]
+=-454493.7331556456
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[5] Exists([grade(S,C,low) ] [])]
+=-217322.27080630604
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[6] Exists([grade(S,C,mid) ] [])]
+=-348984.5252913586
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[7] Exists([grade(S,C,high) ] [])]
+=-325027.38968263153
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[8] Value([] [intelligence(S) ])]
+=-56606.58045734721
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[9] Exists([teaches(P,C) ] [])]
+=-55153.53827602175
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[10] Count([teaches(P,C) ] [])]
+=-55153.53827602175
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[11] Value([] [nrhours(C) ])]
+=-71779.38887523723
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[12] Value([] [difficulty(C) ])]
+=-73939.81039803481
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[13] Exists([difficulty(C,easy) ] [])]
+=-61452.69077947594
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[14] Exists([difficulty(C,medium) ] [])]
+=-59608.74775391675
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[15] Exists([difficulty(C,hard) ] [])]
+=-72922.46039567619
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[16] Exists([friend(S,S1) ] [])]
+=-55153.53827602175
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[17] Count([friend(S,S1) ] [])]
+=-55314.42590674506
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[18] Value([satisfaction(S,C,low) ] [grade(S,C) ])]
+=-205108.27334892843
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[19] Exists([satisfaction(S,C,low) , grade(S,C,low) ] [])]
+=-92666.53804718776
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[20] Exists([satisfaction(S,C,low) , grade(S,C,mid) ] [])]
+=-162231.29578936048
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[21] Exists([satisfaction(S,C,low) , grade(S,C,high) ] [])]
+=-167341.32806441322
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[22] Value([satisfaction(S,C,low) ] [intelligence(S) ])]
+=-55183.9967865513
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[23] Exists([satisfaction(S,C,low) , teaches(P,C) ] [])]
+=-266178.4708302339
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[24] Count([satisfaction(S,C,low) , teaches(P,C) ] [])]
+=-266178.25911864825
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[25] Value([satisfaction(S,C,low) ] [nrhours(C) ])]
+=-55183.9967865513
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[26] Value([satisfaction(S,C,low) ] [difficulty(C) ])]
+=-102724.93626415692
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[27] Exists([satisfaction(S,C,low) , difficulty(C,easy) ] [])]
+=-58384.28798905777
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[28] Exists([satisfaction(S,C,low) , difficulty(C,medium) ] [])]
+=-89028.18725263
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[29] Exists([satisfaction(S,C,low) , difficulty(C,hard) ] [])]
+=-216320.56211165033
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[30] Exists([satisfaction(S,C,low) , friend(S,S1) ] [])]
+=-266178.4708302339
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[31] Count([satisfaction(S,C,low) , friend(S,S1) ] [])]
+=-111132.86753749894
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[32] Value([satisfaction(S,C,mid) ] [grade(S,C) ])]
+=-182663.03132082356
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[33] Value([satisfaction(S,C,mid) ] [intelligence(S) ])]
+=-55184.05500163963
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[34] Exists([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+=-300513.6246297957
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[35] Count([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+=-300394.19033954834
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[36] Value([satisfaction(S,C,mid) ] [nrhours(C) ])]
+=-55184.05500163963
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[37] Exists([satisfaction(S,C,mid) , difficulty(C,hard) ] [])]
+=-250396.15598578934
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[38] Exists([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+=-300513.6246297957
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[39] Count([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+=-244400.10430070377
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[40] Value([satisfaction(S,C,high) ] [intelligence(S) ])]
+=-55184.11107484434
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[41] Exists([satisfaction(S,C,high) , teaches(P,C) ] [])]
+=-250714.54477584665
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[42] Count([satisfaction(S,C,high) , teaches(P,C) ] [])]
+=-250751.6646182952
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[43] Value([satisfaction(S,C,high) ] [nrhours(C) ])]
+=-55184.11107484434
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[44] Exists([satisfaction(S,C,high) , difficulty(C,hard) ] [])]
+=-203774.72543090704
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[45] Exists([satisfaction(S,C,high) , friend(S,S1) ] [])]
+=-250714.54477584665
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[46] Count([satisfaction(S,C,high) , friend(S,S1) ] [])]
+=-95002.52082126908
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[47] Exists([grade(S,C,low) , teaches(P,C) ] [])]
+=-217337.6607064788
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[48] Count([grade(S,C,low) , teaches(P,C) ] [])]
+=-217343.02025192816
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[49] Exists([grade(S,C,low) , difficulty(C,hard) ] [])]
+=-215169.03717627586
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[50] Exists([grade(S,C,mid) , difficulty(C,hard) ] [])]
+=-223346.43020773062
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[51] Exists([grade(S,C,high) , difficulty(C,hard) ] [])]
+=-229557.3173009863
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[52] Exists([friend(S,S1) , takes(S1,C) ] [])]
+=-59045.55416902532
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[53] Count([friend(S,S1) , takes(S1,C) ] [])]
+=-68656.66629425701
+
+NR Missed instances LogReg: 41088
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[54] Value([satisfaction(S,C,low) , grade(S,C,low) ] [intelligence(S) ])]
+=-55199.64450585441
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[55] Exists([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+=-92681.92794736054
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[56] Count([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+=-92681.92794730714
+
+NR Missed instances LogReg: 41088
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[57] Value([satisfaction(S,C,low) , grade(S,C,low) ] [nrhours(C) ])]
+=-55199.64450585441
+
+NR Missed instances LogReg: 41088
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[58] Value([satisfaction(S,C,low) , grade(S,C,low) ] [difficulty(C) ])]
+=-60513.41063454793
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[59] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,easy) ] [])]
+=-55153.494427529375
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[60] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,medium) ] [])]
+=-58451.704417724584
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[61] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,hard) ] [])]
+=-90229.5158238024
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[62] Exists([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+=-92681.92794736054
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[63] Count([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+=-74006.95818688233
+
+NR Missed instances LogReg: 39542
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[64] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [intelligence(S) ])]
+=-55199.589174590015
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[65] Exists([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+=-162246.68568953325
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[66] Count([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+=-162248.4079792943
+
+NR Missed instances LogReg: 39542
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[67] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [nrhours(C) ])]
+=-55199.589174590015
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[68] Exists([satisfaction(S,C,low) , grade(S,C,mid) , difficulty(C,hard) ] [])]
+=-111593.14991906931
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[69] Exists([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+=-162246.68568953325
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[70] Count([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+=-78962.8752160214
+
+NR Missed instances LogReg: 39606
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[71] Value([satisfaction(S,C,low) , grade(S,C,high) ] [intelligence(S) ])]
+=-55199.591507750745
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[72] Exists([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+=-167356.717964586
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[73] Count([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+=-167331.10263116797
+
+NR Missed instances LogReg: 39606
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[74] Value([satisfaction(S,C,low) , grade(S,C,high) ] [nrhours(C) ])]
+=-55199.591507750745
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[75] Exists([satisfaction(S,C,low) , grade(S,C,high) , difficulty(C,hard) ] [])]
+=-100415.7089504011
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[76] Exists([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+=-167356.717964586
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[77] Count([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+=-75177.45325220632
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[78] Average([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+=-55199.38668672407
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[79] Max([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+=-55199.38668672407
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[80] Min([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+=-55199.38668672407
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[81] Exists([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+=-58399.67788923054
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[82] Count([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+=-58399.67788923054
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[83] Exists([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+=-89043.57715280278
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[84] Count([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+=-89043.57715280322
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[85] Exists([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-216335.9520118231
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[86] Count([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-216335.9417878113
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[87] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-204264.34762109138
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[88] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-104983.59535239406
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[89] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-303661.25292235776
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[90] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-83147.12213556455
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[91] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-300356.48342403915
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[92] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-201566.64780682774
+
+NR Missed instances LogReg: 34688
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[93] Mode([satisfaction(S,C,low) , friend(S,S1) ] [grade(S1,C) ])]
+=-230546.2872352543
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[94] Average([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.38668672407
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[95] Max([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.38668672407
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[96] Min([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.38668672407
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[97] Exists([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] [])]
+=-328120.99531737657
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[98] Count([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] [])]
+=-76781.33187523612
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[99] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , grade(S,C,high) ] [])]
+=-98979.42614305596
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[100] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-250411.5458859621
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[101] Count([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-251928.133808508
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[102] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-234310.4097887644
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[103] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-152958.01009562402
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[104] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-201466.69595034022
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[105] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-83601.79873101819
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[106] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-198717.6032207168
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[107] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-102118.37514472916
+
+NR Missed instances LogReg: 36022
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[108] Mode([satisfaction(S,C,mid) , friend(S,S1) ] [grade(S1,C) ])]
+=-202832.63448571198
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[109] Average([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.4449018124
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[110] Max([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.4449018124
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[111] Min([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.4449018124
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[112] Exists([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+=-290407.5403536349
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+=-50036.32115934901
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[114] Exists([satisfaction(S,C,high) , difficulty(C,hard) , grade(S,C,high) ] [])]
+=-107695.80150625252
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[115] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-193515.25176498803
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[116] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-88836.31652109427
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[117] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-218754.67728964437
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[118] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-122900.06620670334
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[119] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-218367.73165168636
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[120] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-145632.74309006138
+
+NR Missed instances LogReg: 37424
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[121] Mode([satisfaction(S,C,high) , friend(S,S1) ] [grade(S1,C) ])]
+=-140423.2428667306
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[122] Average([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.50097501711
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[123] Max([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.50097501711
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[124] Min([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+=-55199.50097501711
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[125] Exists([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] [])]
+=-230219.3509147058
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[126] Count([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] [])]
+=-72511.1629433875
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[127] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+=-60467.104829652904
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[128] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+=-63363.6156978083
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[129] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+=-61179.135563799086
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[130] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+=-63619.92474682862
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[131] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+=-60416.07291757337
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[132] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+=-62566.10788617546
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[133] Mode([friend(S,S1) , takes(S1,C) ] [satisfaction(S1,C) ])]
+=-56366.57536737237
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[134] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+=-63926.77039086548
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[135] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+=-64033.03855346367
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[136] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+=-61875.135397265774
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[137] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+=-65840.89798599824
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[138] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+=-58230.62333602613
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[139] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+=-59853.55818960094
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[140] Mode([friend(S,S1) , takes(S1,C) ] [grade(S1,C) ])]
+=-59651.5452299364
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[141] Average([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+=-55226.92665541269
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[142] Max([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+=-57330.678302618486
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[143] Min([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+=-56508.956942862824
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[144] Count([friend(S,S1) , takes(S1,C) ] [])]
+=-68656.66629425701
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[145] Mode([friend(S,S1) ] [satisfaction(S1,C) ])]
+=-56351.1854671996
+
+
+ THE BEST IN THIS ITERATION:  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+ WITH SCORE: -50036.32115934901
+
+
+ COMPARING NEW PROPOSED BEST SCORE TO CURRENT: -50036.32115934901>=-55145.84332592535 
+
+ALL REFINEMENTS: FOR  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+ 
+[Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [0] Value([] [satisfaction(S,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [1] Exists([satisfaction(S,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [2] Exists([satisfaction(S,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [3] Exists([satisfaction(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [4] Value([] [grade(S,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [5] Exists([grade(S,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [6] Exists([grade(S,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [7] Exists([grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [8] Value([] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [9] Exists([teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [10] Count([teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [11] Value([] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [12] Value([] [difficulty(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [13] Exists([difficulty(C,easy) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [14] Exists([difficulty(C,medium) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [15] Exists([difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [16] Exists([friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [17] Count([friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [18] Value([satisfaction(S,C,low) ] [grade(S,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [19] Exists([satisfaction(S,C,low) , grade(S,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [20] Exists([satisfaction(S,C,low) , grade(S,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [21] Exists([satisfaction(S,C,low) , grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [22] Value([satisfaction(S,C,low) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [23] Exists([satisfaction(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [24] Count([satisfaction(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [25] Value([satisfaction(S,C,low) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [26] Value([satisfaction(S,C,low) ] [difficulty(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [27] Exists([satisfaction(S,C,low) , difficulty(C,easy) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [28] Exists([satisfaction(S,C,low) , difficulty(C,medium) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [29] Exists([satisfaction(S,C,low) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [30] Exists([satisfaction(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [31] Count([satisfaction(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [32] Value([satisfaction(S,C,mid) ] [grade(S,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [33] Value([satisfaction(S,C,mid) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [34] Exists([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [35] Count([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [36] Value([satisfaction(S,C,mid) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [37] Exists([satisfaction(S,C,mid) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [38] Exists([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [39] Count([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [40] Value([satisfaction(S,C,high) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [41] Exists([satisfaction(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [42] Count([satisfaction(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [43] Value([satisfaction(S,C,high) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [44] Exists([satisfaction(S,C,high) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [45] Exists([satisfaction(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [46] Count([satisfaction(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [47] Exists([grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [48] Count([grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [49] Exists([grade(S,C,low) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [50] Exists([grade(S,C,mid) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [51] Exists([grade(S,C,high) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [52] Exists([friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [53] Count([friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [54] Value([satisfaction(S,C,low) , grade(S,C,low) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [55] Exists([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [56] Count([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [57] Value([satisfaction(S,C,low) , grade(S,C,low) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [58] Value([satisfaction(S,C,low) , grade(S,C,low) ] [difficulty(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [59] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,easy) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [60] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,medium) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [61] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [62] Exists([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [63] Count([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [64] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [65] Exists([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [66] Count([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [67] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [68] Exists([satisfaction(S,C,low) , grade(S,C,mid) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [69] Exists([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [70] Count([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [71] Value([satisfaction(S,C,low) , grade(S,C,high) ] [intelligence(S) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [72] Exists([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [73] Count([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [74] Value([satisfaction(S,C,low) , grade(S,C,high) ] [nrhours(C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [75] Exists([satisfaction(S,C,low) , grade(S,C,high) , difficulty(C,hard) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [76] Exists([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [77] Count([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [78] Average([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [79] Max([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [80] Min([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [81] Exists([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [82] Count([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [83] Exists([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [84] Count([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [85] Exists([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [86] Count([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [87] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [88] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [89] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [90] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [91] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [92] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [93] Mode([satisfaction(S,C,low) , friend(S,S1) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [94] Average([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [95] Max([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [96] Min([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [97] Exists([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [99] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [100] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [101] Count([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [102] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [103] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [104] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [105] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [106] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [107] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [108] Mode([satisfaction(S,C,mid) , friend(S,S1) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [109] Average([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [110] Max([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [111] Min([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [112] Exists([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [114] Exists([satisfaction(S,C,high) , difficulty(C,hard) , grade(S,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [115] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [116] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [117] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [118] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [119] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [120] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [121] Mode([satisfaction(S,C,high) , friend(S,S1) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [122] Average([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [123] Max([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [124] Min([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [125] Exists([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [127] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [128] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [129] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [130] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [131] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [132] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [133] Mode([friend(S,S1) , takes(S1,C) ] [satisfaction(S1,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [134] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [135] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [136] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [137] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [138] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [139] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [140] Mode([friend(S,S1) , takes(S1,C) ] [grade(S1,C) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [141] Average([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [142] Max([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [143] Min([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [144] Count([friend(S,S1) , takes(S1,C) ] [])]
+, Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [145] Mode([friend(S,S1) ] [satisfaction(S1,C) ])]
+]
+NR Missed instances LogReg: 21468
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [0] Value([] [satisfaction(S,C) ])]
+=-472974.2284344563
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [1] Exists([satisfaction(S,C,low) ] [])]
+=-340794.4917255494
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [2] Exists([satisfaction(S,C,mid) ] [])]
+=-264778.1411797345
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [3] Exists([satisfaction(S,C,high) ] [])]
+=-267715.82056864316
+
+NR Missed instances LogReg: 21468
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [4] Value([] [grade(S,C) ])]
+=-376803.4501144396
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [5] Exists([grade(S,C,low) ] [])]
+=-147528.86281957378
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [6] Exists([grade(S,C,mid) ] [])]
+=-220979.0860128478
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [7] Exists([grade(S,C,high) ] [])]
+=-220247.31115430561
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [8] Value([] [intelligence(S) ])]
+=-50984.38951846253
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [9] Exists([teaches(P,C) ] [])]
+=-50082.490859867336
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [10] Count([teaches(P,C) ] [])]
+=-50082.490859867336
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [11] Value([] [nrhours(C) ])]
+=-60094.55704428584
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [12] Value([] [difficulty(C) ])]
+=-61574.83568137371
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [13] Exists([difficulty(C,easy) ] [])]
+=-54090.398060694475
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [14] Exists([difficulty(C,medium) ] [])]
+=-69066.82215281515
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [15] Exists([difficulty(C,hard) ] [])]
+=-79109.7846056679
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [16] Exists([friend(S,S1) ] [])]
+=-50082.490859867336
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [17] Count([friend(S,S1) ] [])]
+=-50168.115845236505
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [18] Value([satisfaction(S,C,low) ] [grade(S,C) ])]
+=-206953.00596437545
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [19] Exists([satisfaction(S,C,low) , grade(S,C,low) ] [])]
+=-135693.9400300298
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [20] Exists([satisfaction(S,C,low) , grade(S,C,mid) ] [])]
+=-169426.38043898228
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [21] Exists([satisfaction(S,C,low) , grade(S,C,high) ] [])]
+=-177625.1646637448
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [22] Value([satisfaction(S,C,low) ] [intelligence(S) ])]
+=-51727.00393694663
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [23] Exists([satisfaction(S,C,low) , teaches(P,C) ] [])]
+=-340817.5765758086
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [24] Count([satisfaction(S,C,low) , teaches(P,C) ] [])]
+=-340820.35350011644
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [25] Value([satisfaction(S,C,low) ] [nrhours(C) ])]
+=-51727.005050175154
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [26] Value([satisfaction(S,C,low) ] [difficulty(C) ])]
+=-134028.5285970974
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [27] Exists([satisfaction(S,C,low) , difficulty(C,easy) ] [])]
+=-69514.19216237645
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [28] Exists([satisfaction(S,C,low) , difficulty(C,medium) ] [])]
+=-114770.58206645637
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [29] Exists([satisfaction(S,C,low) , difficulty(C,hard) ] [])]
+=-323664.3906004442
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [30] Exists([satisfaction(S,C,low) , friend(S,S1) ] [])]
+=-340817.5765758086
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [31] Count([satisfaction(S,C,low) , friend(S,S1) ] [])]
+=-147714.2560891954
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [32] Value([satisfaction(S,C,mid) ] [grade(S,C) ])]
+=-74489.86493409875
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [33] Value([satisfaction(S,C,mid) ] [intelligence(S) ])]
+=-58255.473576859324
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [34] Exists([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+=-264801.2260299937
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [35] Count([satisfaction(S,C,mid) , teaches(P,C) ] [])]
+=-264801.25592114404
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [36] Value([satisfaction(S,C,mid) ] [nrhours(C) ])]
+=-65232.52750875493
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [37] Exists([satisfaction(S,C,mid) , difficulty(C,hard) ] [])]
+=-67167.49846210299
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [38] Exists([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+=-264801.2260299937
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [39] Count([satisfaction(S,C,mid) , friend(S,S1) ] [])]
+=-98344.18366907926
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [40] Value([satisfaction(S,C,high) ] [intelligence(S) ])]
+=-52900.15751574048
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [41] Exists([satisfaction(S,C,high) , teaches(P,C) ] [])]
+=-267738.90541890234
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [42] Count([satisfaction(S,C,high) , teaches(P,C) ] [])]
+=-267735.2266455682
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [43] Value([satisfaction(S,C,high) ] [nrhours(C) ])]
+=-52900.15744677107
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [44] Exists([satisfaction(S,C,high) , difficulty(C,hard) ] [])]
+=-199595.1242524328
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [45] Exists([satisfaction(S,C,high) , friend(S,S1) ] [])]
+=-267738.90541890234
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [46] Count([satisfaction(S,C,high) , friend(S,S1) ] [])]
+=-90557.63918873647
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [47] Exists([grade(S,C,low) , teaches(P,C) ] [])]
+=-147551.94766983294
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [48] Count([grade(S,C,low) , teaches(P,C) ] [])]
+=-147551.92107994432
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [49] Exists([grade(S,C,low) , difficulty(C,hard) ] [])]
+=-137030.08026481498
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [50] Exists([grade(S,C,mid) , difficulty(C,hard) ] [])]
+=-228911.66326634565
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [51] Exists([grade(S,C,high) , difficulty(C,hard) ] [])]
+=-59333.387308803845
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [52] Exists([friend(S,S1) , takes(S1,C) ] [])]
+=-52044.10978966974
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [53] Count([friend(S,S1) , takes(S1,C) ] [])]
+=-57742.38481882208
+
+NR Missed instances LogReg: 41088
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [54] Value([satisfaction(S,C,low) , grade(S,C,low) ] [intelligence(S) ])]
+=-54534.496734981476
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [55] Exists([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+=-135717.02488028895
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [56] Count([satisfaction(S,C,low) , grade(S,C,low) , teaches(P,C) ] [])]
+=-135717.03423889627
+
+NR Missed instances LogReg: 41088
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [57] Value([satisfaction(S,C,low) , grade(S,C,low) ] [nrhours(C) ])]
+=-54534.49779937544
+
+NR Missed instances LogReg: 41088
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [58] Value([satisfaction(S,C,low) , grade(S,C,low) ] [difficulty(C) ])]
+=-54446.849372514196
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [59] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,easy) ] [])]
+=-50108.36532970826
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [60] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,medium) ] [])]
+=-69633.68666988678
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [61] Exists([satisfaction(S,C,low) , grade(S,C,low) , difficulty(C,hard) ] [])]
+=-147195.46311535506
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [62] Exists([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+=-135717.02488028895
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [63] Count([satisfaction(S,C,low) , grade(S,C,low) , friend(S,S1) ] [])]
+=-69637.18878929786
+
+NR Missed instances LogReg: 39542
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [64] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [intelligence(S) ])]
+=-53894.30412343286
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [65] Exists([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+=-169449.46528924143
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [66] Count([satisfaction(S,C,low) , grade(S,C,mid) , teaches(P,C) ] [])]
+=-169463.32490021197
+
+NR Missed instances LogReg: 39542
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [67] Value([satisfaction(S,C,low) , grade(S,C,mid) ] [nrhours(C) ])]
+=-53894.30407637839
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [68] Exists([satisfaction(S,C,low) , grade(S,C,mid) , difficulty(C,hard) ] [])]
+=-147639.8160330807
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [69] Exists([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+=-169449.46528924143
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [70] Count([satisfaction(S,C,low) , grade(S,C,mid) , friend(S,S1) ] [])]
+=-101358.82576475583
+
+NR Missed instances LogReg: 39606
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [71] Value([satisfaction(S,C,low) , grade(S,C,high) ] [intelligence(S) ])]
+=-53920.80638162654
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [72] Exists([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+=-177648.24951400395
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [73] Count([satisfaction(S,C,low) , grade(S,C,high) , teaches(P,C) ] [])]
+=-177650.21513383696
+
+NR Missed instances LogReg: 39606
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [74] Value([satisfaction(S,C,low) , grade(S,C,high) ] [nrhours(C) ])]
+=-53920.80804255712
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [75] Exists([satisfaction(S,C,low) , grade(S,C,high) , difficulty(C,hard) ] [])]
+=-162693.34228508093
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [76] Exists([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+=-177648.24951400395
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [77] Count([satisfaction(S,C,low) , grade(S,C,high) , friend(S,S1) ] [])]
+=-96542.49902440495
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [78] Average([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+=-51750.08905011101
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [79] Max([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+=-51750.08905011101
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [80] Min([satisfaction(S,C,low) , teaches(P,C) ] [ability(P) ])]
+=-51750.08905011101
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [81] Exists([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+=-69537.2770126356
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [82] Count([satisfaction(S,C,low) , difficulty(C,easy) , teaches(P,C) ] [])]
+=-69537.25693795654
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [83] Exists([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+=-114793.66691671552
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [84] Count([satisfaction(S,C,low) , difficulty(C,medium) , teaches(P,C) ] [])]
+=-114793.65679290333
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [85] Exists([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-323687.4754507034
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [86] Count([satisfaction(S,C,low) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-323687.74008613214
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [87] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-291812.2766139194
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [88] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-119055.92220824098
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [89] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-271331.23505867994
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [90] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-87404.96544649749
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [91] Exists([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-263502.7502489068
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [92] Count([satisfaction(S,C,low) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-225324.59103073578
+
+NR Missed instances LogReg: 34688
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [93] Mode([satisfaction(S,C,low) , friend(S,S1) ] [grade(S1,C) ])]
+=-276608.73784974864
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [94] Average([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+=-51750.08907714125
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [95] Max([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+=-51750.09138938741
+
+NR Missed instances LogReg: 34364
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [96] Min([satisfaction(S,C,low) , friend(S,S1) ] [intelligence(S1) ])]
+=-51750.08886480335
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [97] Exists([satisfaction(S,C,low) , friend(S,S1) , takes(S1,C) ] [])]
+=-359314.08224747586
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [99] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , grade(S,C,high) ] [])]
+=-71744.4055572535
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [100] Exists([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-67190.58331236214
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [101] Count([satisfaction(S,C,mid) , difficulty(C,hard) , teaches(P,C) ] [])]
+=-67190.56891933254
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [102] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-67985.10011191596
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [103] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-69707.15194003504
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [104] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-69960.41113902153
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [105] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-68115.72804798103
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [106] Exists([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-71774.48554792946
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [107] Count([satisfaction(S,C,mid) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-69749.75429602586
+
+NR Missed instances LogReg: 36022
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [108] Mode([satisfaction(S,C,mid) , friend(S,S1) ] [grade(S1,C) ])]
+=-78012.42906847772
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [109] Average([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+=-58273.07129024676
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [110] Max([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+=-58273.4024414057
+
+NR Missed instances LogReg: 35779
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [111] Min([satisfaction(S,C,mid) , friend(S,S1) ] [intelligence(S1) ])]
+=-58462.54715974005
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [112] Exists([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+=-265604.1098935955
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [114] Exists([satisfaction(S,C,high) , difficulty(C,hard) , grade(S,C,high) ] [])]
+=-65231.264152262775
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [115] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-176662.35802657774
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [116] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,low) ] [])]
+=-100029.06447823225
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [117] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-189909.7315163681
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [118] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,mid) ] [])]
+=-77050.69422661193
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [119] Exists([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-190410.1782918389
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [120] Count([satisfaction(S,C,high) , friend(S,S1) , grade(S1,C,high) ] [])]
+=-104984.50317763703
+
+NR Missed instances LogReg: 37424
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [121] Mode([satisfaction(S,C,high) , friend(S,S1) ] [grade(S1,C) ])]
+=-191999.3765317742
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [122] Average([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+=-52923.24267431507
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [123] Max([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+=-52923.24313203401
+
+NR Missed instances LogReg: 37197
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [124] Min([satisfaction(S,C,high) , friend(S,S1) ] [intelligence(S1) ])]
+=-52923.24562413996
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [125] Exists([satisfaction(S,C,high) , friend(S,S1) , takes(S1,C) ] [])]
+=-211530.38533854793
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [127] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+=-53096.68153188252
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [128] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,low) ] [])]
+=-73668.92982100439
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [129] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+=-72170.5753279136
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [130] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,mid) ] [])]
+=-73680.92505580117
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [131] Exists([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+=-71195.39136989423
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [132] Count([friend(S,S1) , takes(S1,C) , satisfaction(S1,C,high) ] [])]
+=-72845.21846211283
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [133] Mode([friend(S,S1) , takes(S1,C) ] [satisfaction(S1,C) ])]
+=-51578.75676978924
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [134] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+=-73198.22528469755
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [135] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,low) ] [])]
+=-73872.49286888832
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [136] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+=-74185.52870373639
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [137] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,mid) ] [])]
+=-75081.84712059495
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [138] Exists([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+=-51846.92354747265
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [139] Count([friend(S,S1) , takes(S1,C) , grade(S1,C,high) ] [])]
+=-52806.72006606468
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [140] Mode([friend(S,S1) , takes(S1,C) ] [grade(S1,C) ])]
+=-53235.1676413914
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [141] Average([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+=-68169.65671340309
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [142] Max([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+=-72230.76938395732
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [143] Min([friend(S,S1) , takes(S1,C) ] [intelligence(S1) ])]
+=-51749.36838741759
+
+NR Missed instances LogReg: 0
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [144] Count([friend(S,S1) , takes(S1,C) ] [])]
+=-57742.38481882208
+
+NR Missed instances LogReg: 5099
+----------REFINEMENT SCORE  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [145] Mode([friend(S,S1) ] [satisfaction(S1,C) ])]
+=-51555.67191953008
+
+
+ THE BEST IN THIS ITERATION:  Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] []), [9] Exists([teaches(P,C) ] [])]
+ WITH SCORE: -50082.490859867336
+
+
+ THE BEST DEPENDENCY IS: Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+     SCORE: -50036.32115934901 
+ WITH PARAMETERS: Printing Softmax Coefficients
+{true={[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])=15451.229452655465}}
+takes = true      
+-0.38226035910603784 + [113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])*15451.229452655465 
+
+Time needed for structure learning: 6263 secs. -----------------
+-----------------------------------------------------------------------
+Best dependency: Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+
+Printing Softmax Coefficients
+{true={[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])=15451.229452655465}}
+takes = true      
+-0.38226035910603784 + [113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])*15451.229452655465 
+
+Head: takes(S,C)Features: [[113] Count([satisfaction(S,C,mid) , friend(S,S1) , takes(S1,C) ] [])]
+
+113#
+NR Missed instances LogReg: 0
+NR Missed instances LogReg: 0
+Number of randvars for this predicate: 38402
+LL on test data(no score): -48638.38338868964
+LL on test data(score): -48638.38338868964
+LL on train data: -49312.78128657104
+Normalized LL on test data: -1.26655860082
+Edit metric: 5.0
+-------------------------------------------------------------------------
+The overall test score: -48638.38338868964
+The overall normalized test score: -1.26655860082
+The overall normalized train score: -1.2721939344350404
+The overall train score: -49312.78128657104
