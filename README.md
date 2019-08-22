@@ -1,5 +1,7 @@
-# DistributionalProgramSynthesis
-Learning Distributional Programs for Relational Auto-completion
+# Distributional Program Synthesis
+* Learns a joint probabilistic relational model in the form of the Distributional Program for a relational database.
+* It can make use of background knowledge written in DC language.
+* Performs Stochastic EM if some fields are missing in the relational database. 
 
 Installation
 ============
@@ -36,7 +38,7 @@ Execution
  f.close()
 ```
 
-2. Learning a distributional program from deterministic/probabilistic data as well as background theory. Two files are needed for this case.
+2. Learning a distributional program from deterministic/probabilistic data as well as background theory. Two input files are needed for this case.
 
 ```python
  ## Output DC program
