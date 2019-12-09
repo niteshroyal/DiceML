@@ -30,6 +30,7 @@ class DCLearner(object):
         self.language = TypesModesAggregationLanguage(self.interface)
         self.scoreFinder = ScoreFinderProbabilistic()
         self.rules = []
+        self.completeteLikelihood = float('-inf')
         self.rulesFragmented = []
         self.featureList = []
         self.featureListCopy = []
@@ -475,6 +476,8 @@ class DCLearner(object):
                 pass
             scoreAndDistribution = self.scoreFinder.getScore(bigX, bigY, self.targetType, xVar, bigP, numOfExamples, self.NUM_OF_SAMPLES)
             distribution = scoreAndDistribution['distribution']
+            likelihood = scoreAndDistribution['likelihood']
+            self.completeteLikelihood = self.completeteLikelihood + likelihood
             self.rules.append(self.toStringOfRules(self.targetPredicateString, currentStringOfFeatures, distribution))
             ruleFragment = {}
             ruleFragment[self.targetPredicateString] = currentListOfFeatures
@@ -627,6 +630,7 @@ class DCLearner(object):
 
     def learnRules(self):
         targets = self.language.target
+        self.completeteLikelihood = 0
         for target in targets:
             self.defaultRuleAddedForCurrentTarget = False
             self.isFirst = True
@@ -685,12 +689,13 @@ class DCLearner(object):
 
 if __name__ == '__main__':
     outputFile = '../data/MyDCRules.pl'
+    
     f = open(outputFile, 'w')
     
-    ## To run in deterministic mode
+    # To run in deterministic mode
     obj = DCLearner('../data/FinancialData.pl', '', '')
     
-    ## To run in probabilistic mode 
+    # To run in probabilistic mode 
     #obj = DCLearner('../data/FinancialData_Enumerated.pl', '../data/FinancialDataDC.pl', '')
     
     obj.learnRules()

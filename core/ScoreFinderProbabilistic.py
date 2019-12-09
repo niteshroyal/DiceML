@@ -52,8 +52,8 @@ class ScoreFinderProbabilistic(object):
                 a += cons1*bigP[i]
                 score += a
         distribution = 'Gaussian(' + str(mean) + ', ' + str(variance) + ')'
-        score = 2*score
-        result = {'score' : score, 'coefficient' : mean, 'variance' : variance, 'distribution': distribution}
+        bscore = 2*score
+        result = {'score' : bscore, 'coefficient' : mean, 'variance' : variance, 'distribution': distribution, 'likelihood': score}
         return result
     
     def fitMultinomialDistribution(self, bigY, bigYCross, bigP):
@@ -82,8 +82,8 @@ class ScoreFinderProbabilistic(object):
         for i in range(0, len(bigYCross)):
             score += classLogProbs[bigYCross[i]]*bigP[i]
         distribution = 'Finite(' + classKeys + ', ' + str(classProbs) + ')' 
-        score = 2*score
-        result = {'score': score, 'coefficient': classProbs, 'distribution': distribution}
+        bscore = 2*score
+        result = {'score': bscore, 'coefficient': classProbs, 'distribution': distribution, 'likelihood': score}
         return result
         
     def fitLinearRegressionModel(self, bigX, bigY, bigXCross, bigYCross, xVar, bigP, numOfExamples):
@@ -147,8 +147,8 @@ class ScoreFinderProbabilistic(object):
                 distribution += var + ', '
             i += 1
         distribution += str(param) + ', ' + str(variance) + ')'
-        score = 2*score-(numCoef*np.log(numOfExamples))
-        result = {'score' : score, 'coefficient' : param, 'variance' : variance, 'distribution': distribution}
+        bscore = 2*score-(numCoef*np.log(numOfExamples))
+        result = {'score' : bscore, 'coefficient' : param, 'variance' : variance, 'distribution': distribution, 'likelihood': score}
         return result
     
     def fitMultinomialClassificationModel(self, bigX, bigY, bigXCross, bigYCross, xVar, bigP, numOfExamples):
@@ -218,8 +218,8 @@ class ScoreFinderProbabilistic(object):
                     distribution += var + ', '
                 i += 1
             distribution += classString + ', ' + str(parameter) + ')'
-        score = 2*score - numCoef*np.log(numOfExamples)
-        result = {'score' : score, 'coefficient': param, 'distribution': distribution}
+        bscore = 2*score - numCoef*np.log(numOfExamples)
+        result = {'score' : bscore, 'coefficient': param, 'distribution': distribution, 'likelihood': score}
         return result
 
     def getScore(self, bigX, bigY, targetType, xVar, bigP, numOfExamples, numSamples):

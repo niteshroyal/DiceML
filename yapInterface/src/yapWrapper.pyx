@@ -1,5 +1,5 @@
 from libcpp.string cimport string
-from libc.stdlib cimport free, malloc
+from libc.stdlib cimport free
 from libcpp cimport bool
 from libc.string cimport strcpy
     

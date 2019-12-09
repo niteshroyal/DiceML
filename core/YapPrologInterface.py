@@ -328,10 +328,19 @@ class YapPrologInterface(object):
         return self.yapObject
     
 if __name__ == '__main__':
+    #obj = YapPrologInterface()
+    #obj.consultWithOneFile('../program/testSampling.pl')
+    #obj.setNumOfSamples(10)
+    #body = 'stress(S, Y), rating(S, Z)'
+    #query = 'smokes(S, X),stress(S, Y), rating(S, Z)'
+    #res = obj.getSamplesAndProbabilityOfQuery(query, body, ['S','X'], ['Z','Y'])
+    #print res
+    
     obj = YapPrologInterface()
-    obj.consultWithOneFile('../program/testSampling.pl')
-    obj.setNumOfSamples(10)
-    body = 'stress(S, Y), rating(S, Z)'
-    query = 'smokes(S, X),stress(S, Y), rating(S, Z)'
-    res = obj.getSamplesAndProbabilityOfQuery(query, body, ['S','X'], ['Z','Y'])
+    obj.consultWithTwoFiles('../data/FinancialData_Enumerated.pl', '../data/FinancialDataDC.pl', 10)
+    query = '(findall_forward(Ca_M,(hasAccount(C_M,a_10630)~=true,age(C_M)~=Ca_M),X_T_12_Temp),avg(X_T_12_Temp)~=X_T_12)'
+    res = obj.queryWithSamples(2, query, '', '[X_T_12]')
     print res
+    
+    
+    

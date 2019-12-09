@@ -220,7 +220,7 @@ bool dc::runGoalOnce(YAP_Term tmp,int argOutput, int &out){
 		return false;
 	out = YAP_IntOfTerm(YAP_ArgOfTerm(argOutput,YAP_GetFromSlot(safe_t)));
 	YAP_RecoverSlots(1); // safe copy not needed anymore
-	res = YAP_ShutdownGoal(TRUE);
+	//res = YAP_ShutdownGoal(TRUE);
 	return res;
 
 }
@@ -233,7 +233,7 @@ bool dc::runGoalOnce(YAP_Term tmp,int argOutput, double &out){
 		return false;
 	out = YAP_FloatOfTerm(YAP_ArgOfTerm(argOutput,YAP_GetFromSlot(safe_t)));
 	YAP_RecoverSlots(1); // safe copy not needed anymore
-	res = YAP_ShutdownGoal(TRUE);
+	//res = YAP_ShutdownGoal(TRUE);
 	return res;
 }
 
@@ -245,7 +245,7 @@ bool dc::runGoalOnce(YAP_Term tmp,int argOutput1, int argOutput2, double &out1, 
 	out1 = YAP_FloatOfTerm(YAP_ArgOfTerm(argOutput1,YAP_GetFromSlot(safe_t)));
 	out2 = YAP_ArgOfTerm(argOutput2,YAP_GetFromSlot(safe_t));
 	YAP_RecoverSlots(1); // safe copy not needed anymore
-	res = YAP_ShutdownGoal(TRUE);
+	//res = YAP_ShutdownGoal(TRUE);
 	return res;
 }
 
@@ -256,7 +256,7 @@ bool dc::runGoal(YAP_Term tmp,int argOutput, YAP_Term &out){
 		return false;
 	out = YAP_ArgOfTerm(argOutput,YAP_GetFromSlot(safe_t));
 	YAP_RecoverSlots(1); // safe copy not needed anymore
-	res = YAP_ShutdownGoal(TRUE);
+	//res = YAP_ShutdownGoal(TRUE);
 	return res;
 }
 
@@ -267,7 +267,7 @@ bool dc::runGoalOnce(YAP_Term tmp,int argOutput, YAP_Term &out){
 		return false;
 	out = YAP_ArgOfTerm(argOutput,YAP_GetFromSlot(safe_t));
 	YAP_RecoverSlots(1); // safe copy not needed anymore
-	res = YAP_ShutdownGoal(TRUE);
+	//res = YAP_ShutdownGoal(TRUE);
 	return res;
 }
 
@@ -279,7 +279,7 @@ bool dc::runGoalOnce(YAP_Term tmp,int argOutput1, int argOutput2, YAP_Term &out1
 	out1 = YAP_ArgOfTerm(argOutput1,YAP_GetFromSlot(safe_t));
 	out2 = YAP_ArgOfTerm(argOutput2,YAP_GetFromSlot(safe_t));
 	YAP_RecoverSlots(1); // safe copy not needed anymore
-	res = YAP_ShutdownGoal(TRUE);
+	//res = YAP_ShutdownGoal(TRUE);
 	return res;
 }
 
