@@ -228,7 +228,7 @@ class TranslateToDC(object):
             distribution = 'finite([{}])'.format(','.join(probs))
         elif 'LogisticRegression' in distribution:
             distribution = 'finite([Probability:{},Probability2:{}])'.format(args[1][0],args[1][1])
-            tempBody = ', logistic({},{},Probability), Probability2 is 1.0-Probability.'.format([float(x) for x in args[2]],'[{}]'.format(', '.join([x.strip() for x in args[0]])))
+            tempBody = ', logistic({},{},Probability2), Probability is 1.0-Probability2.'.format([float(x) for x in args[2]],'[{}]'.format(', '.join([x.strip() for x in args[0]])))
             body = body.replace('.', tempBody)
         elif 'SoftmaxRegression' in distribution:
             d = 'finite(['

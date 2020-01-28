@@ -67,6 +67,28 @@ RELATIONAL_CHAIN_OF_PREDICATES = dict(
     }
 )
 
+RANDOM_VARIABLE_PREDICATE_INITIAL_VAL = dict(
+    financial = dict(
+        loanAmount = 89880.0,
+        monthlyPayments = 3373.0,
+        age = 22,
+        avgSalary = 12541.0,
+        ratUrbInhab = 100.0,
+        avgNrWith = 11.41666667,
+        avgSumOfInc = 16193.375,
+        avgSumOfW = 15071.1666667,
+        stdMonthInc = 5526.82090052,
+        stdMonthW = 4456.88208549,
+        loanStatus = 'c',
+        gender = 'm',
+        freq = 'm',
+        hasLoan = 'true',
+        clientDistrict = 'true',
+        hasAccount = 'true',
+        clientLoan = 'true'
+    ), 
+)
+
 RANDOM_VARIABLE_PREDICATE_TYPE = dict(
     financial = dict(
         hasLoan = 'discrete',

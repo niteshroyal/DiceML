@@ -4,18 +4,19 @@ Created on Oct 4, 2018
 @author: nitesh
 '''
 import numpy as np
-import time, math
+import time, math, sys
 from core.TranslateToDC import TranslateToDC
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import roc_auc_score
 from core.DCLearner import DCLearner
+#import core.DCLearner.DCLearner as DCLearner
 
 from Experiment1 import Experiment1b
 from Settings import RANDOM_VARIABLE_PREDICATE_TYPE, RANDOM_VARIABLE_PREDICATE, RANDOM_VARIABLE_PREDICATE_RANGE,\
     DECLARATIVE_BIAS, DECLARATIVE_BIAS_ORDERED, PROLOG_PROGRAM_HEADER, DC_PROGRAM_HEADER, \
     RELATIONAL_CHAIN_OF_PREDICATES, RELATIONAL_PREDICATES, PROLOG_MARKOV_BLANKET_INTERVENTIONS,\
-    DC_PROGRAM_DATA_DEPENDENT_RELATION_PROBABILISTIC, MISSING_ATTRIBUTES_FILLER
+    DC_PROGRAM_DATA_DEPENDENT_RELATION_PROBABILISTIC, MISSING_ATTRIBUTES_FILLER, RANDOM_VARIABLE_PREDICATE_INITIAL_VAL
 
 class StochasticEM():  
     def __init__(self, databaseName, numSamples, numEMIterations):
@@ -447,7 +448,16 @@ class StochasticEM():
             fact = fact[0:-1] + ',' + str(val) + ').'
             samples.append(fact)
         return samples
-
+    
+    def generateInitialMissingFields(self, missingFacts):
+        initializedMissingFields = []
+        for item in missingFacts:
+            featName = self.exp1Obj.getPredicateName(item)
+            initValRange = RANDOM_VARIABLE_PREDICATE_INITIAL_VAL[self.DATABASE_NAME][featName]
+            initValRange = str(initValRange)
+            fact = item[0:-1] + ',' + str(initValRange) + ').'
+            initializedMissingFields.append(fact)
+        return initializedMissingFields
 
     def em(self, treeLearnerObject, translateRuleObject, missingFacts, trainRelationalFacts, trainRandVarFacts, treeOutputFileTraining):
         oldBackgroundTheory = []
@@ -463,10 +473,8 @@ class StochasticEM():
                     success = treeLearnerObject.interface.executeQuery(query)
                     if success == False:
                         raise Exception('Yap execute failed!')
-                
                 global samplesOfMissingFields
                 samplesOfMissingFields = self.generateSamplesOfMissingFields(treeLearnerObject.interface, missingFacts)
-                
                 for bt in oldBackgroundTheory['theory']:
                     bt = bt[0:-1]
                     [head, distribution, body] = self.splitDCToHeadDistributionBody(bt)
@@ -477,19 +485,24 @@ class StochasticEM():
                 self.assertPrologTrainFactsAtEnd(samplesOfMissingFields, treeLearnerObject.interface)
                 treeLearnerObject.runProbMode = False
                 treeLearnerObject.learnRules()
+                print 'Complete Log-Likelihood for EM case = ' + str(treeLearnerObject.completeteLikelihood) + '\n'
                 self.retractPrologTrainFacts(samplesOfMissingFields, treeLearnerObject.interface)
             else:
                 treeLearnerObject.runProbMode = False
                 self.assertPrologTrainFactsAtEnd(trainRelationalFacts, treeLearnerObject.interface)
                 self.assertPrologTrainFactsAtEnd(trainRandVarFacts, treeLearnerObject.interface)
+                initialMissingFields = self.generateInitialMissingFields(missingFacts)
+                self.assertPrologTrainFactsAtEnd(initialMissingFields, treeLearnerObject.interface)
                 treeLearnerObject.learnRules()
+                print 'Complete Log-Likelihood for EM case = ' + str(treeLearnerObject.completeteLikelihood) + '\n'
+                self.retractPrologTrainFacts(initialMissingFields, treeLearnerObject.interface)
                 self.assertDCTrainFacts(trainRelationalFacts, treeLearnerObject.interface)
                 evidenceTest = ''
+                
                 for item in trainRandVarFacts:
                     feat = self.exp1Obj.dcPredicateAndValue(item)
                     if evidenceTest == '':
                         evidenceTest = evidenceTest + feat[0] + ' ~= ' + feat[1]
-                        
                     else:
                         evidenceTest = evidenceTest + ',' + feat[0] + ' ~= ' + feat[1]
                 baseVar = 'X'
@@ -505,7 +518,6 @@ class StochasticEM():
                         queryTest = queryTest + missingFacts[i] + ' ~= ' + newVar
                     else:
                         queryTest = queryTest + ',' + missingFacts[i] + ' ~= ' + newVar
-                
                 self.evidenceListString = evidenceTest
                 self.queryListString = queryTest
                 self.variableNameListString = variables
@@ -645,6 +657,7 @@ class StochasticEM():
             self.assertPrologTrainFactsAtEnd(newTrainFacts, obj.interface)
             obj.runProbMode = False
             obj.learnRules()
+            print 'Complete Log-Likelihood for partial case = ' + str(obj.completeteLikelihood) + '\n'
             self.retractPrologTrainFacts(newTrainFacts, obj.interface)
             obj1 = TranslateToDC()
             obj1.setRandomVariablePredicates(RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
@@ -669,6 +682,7 @@ class StochasticEM():
             self.assertPrologTrainFactsAtEnd(trainFacts, obj.interface)
             obj.runProbMode = False
             obj.learnRules()
+            print 'Complete Log-Likelihood for complete case = ' + str(obj.completeteLikelihood) + '\n'
             self.retractPrologTrainFacts(trainFacts, obj.interface)
             obj1 = TranslateToDC()
             obj1.setRandomVariablePredicates(RANDOM_VARIABLE_PREDICATE[self.DATABASE_NAME])
@@ -691,15 +705,16 @@ class StochasticEM():
 
 
 if __name__ == "__main__":
-
+    
+    print sys.argv
     #databaseName = sys.argv[1]
     databaseName = 'financial'
     
-    #numSamples = sys.argv[2]
+    #numSamples = int(sys.argv[2])
     numSamples = 1000
     
-    #numEMIterations = sys.argv[3]
-    numEMIterations = 2
+    #numEMIterations = int(sys.argv[3])
+    numEMIterations = 1
     
     #mode = sys.argv[4]
     mode = 'em' ## 'em', 'partial', 'complete'
@@ -713,7 +728,7 @@ if __name__ == "__main__":
     #testFolderString = sys.argv[7]
     testFolderString = '/home/nitesh/eclipse-workspace/DistributionalProgramSynthesis/data/PKDD/pkdd/Fold2/test'
     
-    #percentageMissing = sys.argv[8]
+    #percentageMissing = int(sys.argv[8])
     percentageMissing = 10
     
     #prologTrainingFileName = sys.argv[9]

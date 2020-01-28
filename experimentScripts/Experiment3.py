@@ -9,7 +9,7 @@ databaseName = 'financial'
 
 numSamples = 1000
 
-numEMIterations = 30
+numEMIterations = 2
 
 #prologTrainingFileName = '../data/Hepatitis3c.pl'
 prologTrainingFileName = '../data/Financial3c.pl'
@@ -20,7 +20,8 @@ dcTrainingFile = '../data/FinancialDC3c.pl'
 treeOutputFileTraining = '../data/EnsembleOfDLTs3c.pl'
 #treeOutputFileTraining = '../data/EnsembleOfDLTs3c.pl'
 
-percentageMissingList = [10, 20, 30, 40, 50]
+percentageMissingList = [50]
+#percentageMissingList = [10, 20, 30, 40, 50]
 
 folder = '/home/nitesh/eclipse-workspace/DistributionalProgramSynthesis/data/PKDD/pkdd/'
 #folder = '/home/nitesh/eclipse-workspace/DistributionalProgramSynthesis/data/Hepatitis/'
@@ -30,13 +31,15 @@ folder = '/home/nitesh/eclipse-workspace/DistributionalProgramSynthesis/data/PKD
 
 #missPred = [['avgSumOfInc', 'loanStatus', 'loanAmount', 'gender', 'age', 'avgNrWith', 'monthlyPayments', 'avgSumOfW', 'freq', 'stdMonthInc', 'stdMonthW', 'avgSalary', 'ratUrbInhab'], ['avgSumOfInc', 'loanStatus', 'loanAmount', 'gender', 'age', 'ratUrbInhab', 'avgNrWith', 'monthlyPayments', 'avgSalary', 'avgSumOfW', 'freq', 'stdMonthInc', 'stdMonthW']]
 #missPred = [['avgSumOfInc', 'loanStatus', 'loanAmount', 'gender', 'age', 'avgNrWith', 'monthlyPayments', 'avgSumOfW', 'freq', 'stdMonthInc', 'stdMonthW'], ['avgSumOfInc', 'loanStatus', 'loanAmount', 'gender', 'age', 'ratUrbInhab', 'avgNrWith', 'monthlyPayments', 'avgSalary', 'avgSumOfW', 'freq', 'stdMonthInc', 'stdMonthW']]
-testPred = [['monthlyPayments'],['loanStatus']]
+testPred = ['monthlyPayments', 'loanStatus']
 #missPred = [['fibros', 'activity', 'sex', 'age', 'got', 'gpt', 'alb', 'tbil', 'dbil', 'che', 'ttt', 'ztt', 'tcho', 'tp', 'dur']]
 #missPred = [['got']]
 #missPred = [['got', 'gpt', 'alb', 'tbil', 'dbil', 'che', 'ttt', 'ztt', 'tcho', 'tp']]
 #missPred = [['tcho']]
 
-modes = ['em', 'partial', 'complete']
+modes = ['em']
+
+#modes = ['em', 'partial', 'complete']
 
 for j in range(1,2):
     trainFoldString = folder + "Fold" + str(j) + '/train'
@@ -49,7 +52,7 @@ for j in range(1,2):
             percentageMissing = precent
             for mode in modes:
                 try:
-                    command = ['python', 'StochasticEM.py', databaseName, numSamples, numEMIterations, mode, trainFoldString, validateFoldString, testFolderString, percentageMissing, prologTrainingFileName, dcTrainingFile, treeOutputFileTraining, testPredicate]
+                    command = ['python', 'StochasticEM.py', databaseName, str(numSamples), str(numEMIterations), mode, trainFoldString, validateFoldString, testFolderString, str(percentageMissing), prologTrainingFileName, dcTrainingFile, treeOutputFileTraining, testPredicate]
                     subprocess.call(command)
                     time.sleep(30)
                 except RuntimeError as e:

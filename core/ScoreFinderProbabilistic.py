@@ -11,7 +11,7 @@ class ScoreFinderProbabilistic(object):
     def __init__(self):
         numIteration = 1000
         # For softmax regression
-        regularization = 1
+        regularization = 100
         self.softmax = LogisticRegression(solver='lbfgs', multi_class='multinomial', C=regularization, penalty='l2', fit_intercept=True, max_iter=numIteration)
         
         # For linear regression
@@ -52,11 +52,12 @@ class ScoreFinderProbabilistic(object):
                 a += cons1*bigP[i]
                 score += a
         distribution = 'Gaussian(' + str(mean) + ', ' + str(variance) + ')'
-        bscore = 2*score
+        numCoef = 2
+        bscore = 2*score-(numCoef*np.log(numOfExamples))
         result = {'score' : bscore, 'coefficient' : mean, 'variance' : variance, 'distribution': distribution, 'likelihood': score}
         return result
     
-    def fitMultinomialDistribution(self, bigY, bigYCross, bigP):
+    def fitMultinomialDistribution(self, bigY, bigYCross, bigP, numOfExamples):
         classes = {}
         classLogProbs = {}
         classProbs = []
@@ -82,7 +83,8 @@ class ScoreFinderProbabilistic(object):
         for i in range(0, len(bigYCross)):
             score += classLogProbs[bigYCross[i]]*bigP[i]
         distribution = 'Finite(' + classKeys + ', ' + str(classProbs) + ')' 
-        bscore = 2*score
+        numCoef = 1
+        bscore = 2*score-(numCoef*np.log(numOfExamples))
         result = {'score': bscore, 'coefficient': classProbs, 'distribution': distribution, 'likelihood': score}
         return result
         
@@ -111,7 +113,7 @@ class ScoreFinderProbabilistic(object):
             data.append(aRow)
         numCols = len(data[0])
         numRows = len(data)
-        numCoef = len(param)
+        numCoef = len(param) + 1
         for rec in data:
             p = 0
             for i in range(0,numCols):
@@ -257,7 +259,7 @@ class ScoreFinderProbabilistic(object):
             if(bigY == []):
                 scoreAndDistribution = self.fitNoDistribution()
             elif(targetType == 'discrete'):
-                scoreAndDistribution = self.fitMultinomialDistribution(bigY, bigYCross, bigP)
+                scoreAndDistribution = self.fitMultinomialDistribution(bigY, bigYCross, bigP, numOfExamples)
             elif(targetType == 'continuous'):
                 scoreAndDistribution = self.fitGaussainDistribution(bigY, bigYCross, bigP, numOfExamples)
             else:
@@ -266,7 +268,7 @@ class ScoreFinderProbabilistic(object):
             scoreAndDistribution = self.fitLinearRegressionModel(bigX, bigY, bigXCross, bigYCross, xVar, bigP, numOfExamples)
         elif(targetType == 'discrete'):
             if(len(set(bigY)) == 1):
-                scoreAndDistribution = self.fitMultinomialDistribution(bigY, bigYCross, bigP)
+                scoreAndDistribution = self.fitMultinomialDistribution(bigY, bigYCross, bigP, numOfExamples)
             else:
                 scoreAndDistribution = self.fitMultinomialClassificationModel(bigX, bigY, bigXCross, bigYCross, xVar, bigP, numOfExamples)
         else:

@@ -527,9 +527,9 @@ def experiment2b(numOfSamples, trainingFolder, validationFolder, testFolder, pro
     listOfEnumeration = listOfEnumeration + listOfE
     listOfActualValue = listOfActualValue + listOfA
             
-    modeList = ['missing','complete']
+    #modeList = ['missing','complete']
     
-    #modeList = ['probabilistic', 'mode', 'missing', 'complete']
+    modeList = ['probabilistic', 'mode', 'missing', 'complete']
     
     for mode in modeList:
         for randVariable in listOfTestPredicate:
