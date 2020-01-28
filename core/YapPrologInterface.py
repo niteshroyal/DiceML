@@ -36,10 +36,13 @@ class YapPrologInterface(object):
         
     
     def consultWithOneFile(self, yapFileName):
+        yapFileName = yapFileName.encode('utf-8')
         self.yapObject = PyDC(yapFileName)
         self.yapFileName.append(yapFileName)
         
     def consultWithTwoFiles(self, yapFileName1, yapFileName2, numOfSamples):
+        yapFileName1 = yapFileName1.encode('utf-8')
+        yapFileName2 = yapFileName2.encode('utf-8')
         self.yapObject = PyDC(yapFileName1, yapFileName2)
         self.yapFileName.append(yapFileName1)
         self.yapFileName.append(yapFileName2)
@@ -49,6 +52,8 @@ class YapPrologInterface(object):
         self.numOfSamples = num
     
     def query(self, numOfSamples, query, evidence):
+        query = query.encode('utf-8')
+        evidence = evidence.encode('utf-8')
         probability = self.yapObject.query(numOfSamples, query, evidence)
         return probability
     
@@ -56,10 +61,14 @@ class YapPrologInterface(object):
         self.yapObject.terminate()
     
     def executeQuery(self, queryStr):
+        queryStr = queryStr.encode('utf-8')
         success = self.yapObject.execute(queryStr)
         return success
     
     def sample(self, numOfSamples, query, evidence, variable):
+        query = query.encode('utf-8')
+        evidence = evidence.encode('utf-8')
+        variable = variable.encode('utf-8')
         return self.yapObject.sample(numOfSamples, query, evidence, variable, BIGNUM)
     
     def prologQuery(self, query):
@@ -67,6 +76,9 @@ class YapPrologInterface(object):
         return st
     
     def queryWithSamples(self, numOfSamples, query, evidence, variable):
+        query = query.encode('utf-8')
+        evidence = evidence.encode('utf-8')
+        variable = variable.encode('utf-8')
         self.yapObject.queryWithSamples(numOfSamples, query, evidence, variable, FLAG, BIGNUM)
         result = dict()
         result['probability'] = self.yapObject.prob
@@ -74,6 +86,7 @@ class YapPrologInterface(object):
         return result
 
     def requisiteEvidence(self, query):
+        query = query.encode('utf-8')
         query = 'requsite(' + query + ',ProbEvidence,Intervention).'
         self.yapObject.requisiteEvidence(query, BIGNUM)
         result = dict()
@@ -82,9 +95,10 @@ class YapPrologInterface(object):
         return result
     
     def simpleQuery(self, query):
-        query = query.replace(' ', '')
-        listOfVars = re.findall('\((.*)\)', query)[0]
-        listOfVars = listOfVars.split(',')
+        query = query.encode('utf-8')
+        query = query.replace(' '.encode('utf-8'), ''.encode('utf-8'))
+        listOfVars = re.findall('\((.*)\)'.encode('utf-8'), query)[0]
+        listOfVars = listOfVars.split(','.encode('utf-8'))
         result = self.listQuery(query, listOfVars)
         keys = result.keys()
         akey = keys[0]
@@ -126,23 +140,23 @@ class YapPrologInterface(object):
         result = {}
         for var in listOfVars:
             result[var] = []
-        stringOfVars = '['
+        stringOfVars = '['.encode('utf-8')
         lenOfListOfVars = len(listOfVars)
         for i in range(0, lenOfListOfVars):
             if i == lenOfListOfVars-1:
-                stringOfVars += listOfVars[i] + ']'
+                stringOfVars += listOfVars[i] + ']'.encode('utf-8')
             else:
-                stringOfVars += listOfVars[i] + ','
+                stringOfVars += listOfVars[i] + ','.encode('utf-8')
         if query[-1] == '.':
             query = query[:-1]
-        query = 'findall(' + stringOfVars + ',' + '(' + query + '),FINDALL).'
+        query = 'findall('.encode('utf-8') + stringOfVars + ','.encode('utf-8') + '('.encode('utf-8') + query + '),FINDALL).'.encode('utf-8')
         response = self.prologQuery(query)
         response = self.convertStringReprOfListToList(response)
         for ele in response:
             for i in range(0, len(listOfVars)):
                 a = result[listOfVars[i]]
                 a.append(ele[i])
-        s = 'Query: ', query, '   Response ' + str(result)
+        s = 'Query: '.encode('utf-8'), query, '   Response '.encode('utf-8') + str(result)
         logging.info(s)
         return result
 
@@ -340,7 +354,7 @@ if __name__ == '__main__':
     obj.consultWithTwoFiles('../data/FinancialData_Enumerated.pl', '../data/FinancialDataDC.pl', 10)
     query = '(findall_forward(Ca_M,(hasAccount(C_M,a_10630)~=true,age(C_M)~=Ca_M),X_T_12_Temp),avg(X_T_12_Temp)~=X_T_12)'
     res = obj.queryWithSamples(2, query, '', '[X_T_12]')
-    print res
+    print(res)
     
     
     

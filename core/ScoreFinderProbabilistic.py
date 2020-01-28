@@ -272,7 +272,7 @@ class ScoreFinderProbabilistic(object):
             else:
                 scoreAndDistribution = self.fitMultinomialClassificationModel(bigX, bigY, bigXCross, bigYCross, xVar, bigP, numOfExamples)
         else:
-            print "Target variable type undefined"
+            print("Target variable type undefined")
         return scoreAndDistribution
             
 if __name__ == '__main__':
@@ -281,6 +281,6 @@ if __name__ == '__main__':
     P = [0.05, 0.05, 0.06, 0.06, 0.01, 0.06]
     sf = ScoreFinderProbabilistic()
     a = sf.getScore(X, Y, 'discrete', ['A', 'B'], P)
-    print a 
+    print(a) 
     b = sf.getScore([], Y, 'discrete', ['A', 'B'], P)
-    print b
+    print(b)
