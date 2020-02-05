@@ -373,10 +373,16 @@ randomVariableNames([clientDistrict, clientLoan, hasAccount, hasLoan, age, loanA
 rank([clientDistrict, clientLoan, hasAccount, hasLoan, age, avgSalary, ratUrbInhab, avgSumOfW, avgNrWith, loanAmount, loanStatus, freq, stdMonthInc, stdMonthW, gender, avgSumOfInc, monthlyPayments]).
 
 %Target
+learn(age, 2, 2, continuous).
 learn(loanAmount, 2, 2, continuous). %This states to learn a model for 2nd argument of loanAmount with arity 2.  
 learn(loanStatus, 2, 2, discrete).
 learn(monthlyPayments, 2, 2, continuous).
 learn(gender, 2, 2, discrete).
+learn(avgSalary, 2, 2, continuous).
+learn(ratUrbInhab, 2, 2, continuous).
+learn(stdMonthW, 2, 2, continuous).
+learn(avgSumOfW, 2, 2, continuous).
+learn(avgNrWith, 2, 2, continuous).
 learn(freq, 2, 2, discrete).
 learn(avgSumOfInc, 2, 2, continuous).
 learn(stdMonthInc, 2, 2, continuous).
