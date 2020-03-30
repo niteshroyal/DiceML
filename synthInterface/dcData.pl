@@ -109,30 +109,30 @@ requsite(X,ProbEvidence,Intervention,Z) :- \+evidence(Z), retractAndAssert(X,Y),
 
 :- dynamic parent/2.
 :- dynamic evidence/1.
-:- dynamic account/1.
-:- dynamic savings/2.
-:- dynamic freq/2.
-:- dynamic hasLoan/3.
 :- dynamic client/1.
 :- dynamic age/2.
 :- dynamic creditScore/2.
 :- dynamic hasAcc/3.
+:- dynamic account/1.
+:- dynamic savings/2.
+:- dynamic freq/2.
+:- dynamic hasLoan/3.
 :- dynamic loan/1.
 :- dynamic loanAmt/2.
 :- dynamic status/2.
 
-account(X) :- evidence(account(X)).
-savings(X,Z) :- account(X), evidence(savings(X,Z)).
-savings(X,null) :- account(X), \+evidence(savings(X,Z)).
-freq(X,Z) :- account(X), evidence(freq(X,Z)).
-freq(X,null) :- account(X), \+evidence(freq(X,Z)).
-hasLoan(X,Y,true) :- evidence(hasLoan(X,Y,true)).
 client(X) :- evidence(client(X)).
 age(X,Z) :- client(X), evidence(age(X,Z)).
 age(X,null) :- client(X), \+evidence(age(X,Z)).
 creditScore(X,Z) :- client(X), evidence(creditScore(X,Z)).
 creditScore(X,null) :- client(X), \+evidence(creditScore(X,Z)).
 hasAcc(X,Y,true) :- evidence(hasAcc(X,Y,true)).
+account(X) :- evidence(account(X)).
+savings(X,Z) :- account(X), evidence(savings(X,Z)).
+savings(X,null) :- account(X), \+evidence(savings(X,Z)).
+freq(X,Z) :- account(X), evidence(freq(X,Z)).
+freq(X,null) :- account(X), \+evidence(freq(X,Z)).
+hasLoan(X,Y,true) :- evidence(hasLoan(X,Y,true)).
 loan(X) :- evidence(loan(X)).
 loanAmt(X,Z) :- loan(X), evidence(loanAmt(X,Z)).
 loanAmt(X,null) :- loan(X), \+evidence(loanAmt(X,Z)).
@@ -140,46 +140,6 @@ status(X,Z) :- loan(X), evidence(status(X,Z)).
 status(X,null) :- loan(X), \+evidence(status(X,Z)).
 
 %Test data prolog 
-evidence(account(a_10)).
-evidence(savings(a_10,2000)).
-evidence(freq(a_10,high)).
-evidence(hasLoan(a_10,l_20,true)).
-evidence(account(a_11)).
-evidence(savings(a_11,2502)).
-evidence(freq(a_11,high)).
-evidence(hasLoan(a_11,l_21,true)).
-evidence(account(a_12)).
-evidence(savings(a_12,3001)).
-evidence(freq(a_12,high)).
-evidence(hasLoan(a_12,l_22,true)).
-evidence(account(a_13)).
-evidence(savings(a_13,3505)).
-evidence(freq(a_13,high)).
-evidence(hasLoan(a_13,l_23,true)).
-evidence(account(a_14)).
-evidence(savings(a_14,4009)).
-evidence(freq(a_14,high)).
-evidence(hasLoan(a_14,l_24,true)).
-evidence(account(a_15)).
-evidence(savings(a_15,4510)).
-evidence(freq(a_15,high)).
-evidence(hasLoan(a_15,l_25,true)).
-evidence(account(a_16)).
-evidence(savings(a_16,5001)).
-evidence(freq(a_16,low)).
-evidence(hasLoan(a_16,l_26,true)).
-evidence(account(a_17)).
-evidence(savings(a_17,5503)).
-evidence(freq(a_17,low)).
-evidence(hasLoan(a_17,l_27,true)).
-evidence(account(a_18)).
-evidence(savings(a_18,6005)).
-evidence(freq(a_18,low)).
-evidence(hasLoan(a_18,l_28,true)).
-evidence(account(a_19)).
-evidence(savings(a_19,6510)).
-evidence(freq(a_19,low)).
-evidence(hasLoan(a_19,l_29,true)).
 evidence(client(ann)).
 evidence(age(ann,43)).
 evidence(creditScore(ann,600)).
@@ -234,6 +194,46 @@ evidence(hasAcc(dris,a_19,true)).
 evidence(client(chi)).
 evidence(age(chi,19)).
 evidence(hasAcc(chi,a_19,true)).
+evidence(account(a_10)).
+evidence(savings(a_10,2000)).
+evidence(freq(a_10,high)).
+evidence(hasLoan(a_10,l_20,true)).
+evidence(account(a_11)).
+evidence(savings(a_11,2502)).
+evidence(freq(a_11,high)).
+evidence(hasLoan(a_11,l_21,true)).
+evidence(account(a_12)).
+evidence(savings(a_12,3001)).
+evidence(freq(a_12,high)).
+evidence(hasLoan(a_12,l_22,true)).
+evidence(account(a_13)).
+evidence(savings(a_13,3505)).
+evidence(freq(a_13,high)).
+evidence(hasLoan(a_13,l_23,true)).
+evidence(account(a_14)).
+evidence(savings(a_14,4009)).
+evidence(freq(a_14,high)).
+evidence(hasLoan(a_14,l_24,true)).
+evidence(account(a_15)).
+evidence(savings(a_15,4510)).
+evidence(freq(a_15,high)).
+evidence(hasLoan(a_15,l_25,true)).
+evidence(account(a_16)).
+evidence(savings(a_16,5001)).
+evidence(freq(a_16,low)).
+evidence(hasLoan(a_16,l_26,true)).
+evidence(account(a_17)).
+evidence(savings(a_17,5503)).
+evidence(freq(a_17,low)).
+evidence(hasLoan(a_17,l_27,true)).
+evidence(account(a_18)).
+evidence(savings(a_18,6005)).
+evidence(freq(a_18,low)).
+evidence(hasLoan(a_18,l_28,true)).
+evidence(account(a_19)).
+evidence(savings(a_19,6510)).
+evidence(freq(a_19,low)).
+evidence(hasLoan(a_19,l_29,true)).
 evidence(loan(l_20)).
 evidence(loanAmt(l_20,20000)).
 evidence(status(l_20,appr)).
@@ -285,28 +285,97 @@ evidence(loanAmt(l_36,43000)).
 evidence(status(l_36,pend)).
 
 %Dependency Structure 
-parent(age(CLIENT,X4),freq(ACCOUNT,X2)) :- age(CLIENT,X4),hasAcc(CLIENT,ACCOUNT,true),freq(ACCOUNT,X2).
-parent(loanAmt(LOAN,X7),freq(ACCOUNT,X2)) :- loanAmt(LOAN,X7),hasLoan(ACCOUNT,LOAN,true),freq(ACCOUNT,X2).
-parent(loanAmt(LOAN,X7),savings(ACCOUNT,X1)) :- loanAmt(LOAN,X7),hasLoan(ACCOUNT,LOAN,true),savings(ACCOUNT,X1).
-parent(status(LOAN,X8),savings(ACCOUNT,X1)) :- status(LOAN,X8),hasLoan(ACCOUNT,LOAN,true),savings(ACCOUNT,X1).
-parent(creditScore(CLIENT,X5),freq(ACCOUNT,X2)) :- creditScore(CLIENT,X5),hasAcc(CLIENT,ACCOUNT,true),freq(ACCOUNT,X2).
-parent(creditScore(CLIENT,X5),age(CLIENT,X4)) :- creditScore(CLIENT,X5),age(CLIENT,X4).
-parent(freq(ACCOUNT,X2),savings(ACCOUNT,X1)) :- freq(ACCOUNT,X2),savings(ACCOUNT,X1).
+parent(loanAmt(LOAN,X7),freq(ACCOUNT,X5)) :- loanAmt(LOAN,X7),hasLoan(ACCOUNT,LOAN,true),freq(ACCOUNT,X5).
+parent(loanAmt(LOAN,X7),savings(ACCOUNT,X4)) :- loanAmt(LOAN,X7),hasLoan(ACCOUNT,LOAN,true),savings(ACCOUNT,X4).
+parent(creditScore(CLIENT,X2),age(CLIENT,X1)) :- creditScore(CLIENT,X2),age(CLIENT,X1).
+parent(savings(ACCOUNT,X4),age(CLIENT,X1)) :- savings(ACCOUNT,X4),age(CLIENT,X1),hasAcc(CLIENT,ACCOUNT,true).
+parent(freq(ACCOUNT,X5),savings(ACCOUNT,X4)) :- freq(ACCOUNT,X5),savings(ACCOUNT,X4).
+parent(status(LOAN,X8),savings(ACCOUNT,X4)) :- status(LOAN,X8),hasLoan(ACCOUNT,LOAN,true),savings(ACCOUNT,X4).
+
+%Interventions 
+client(ann) := true. 
+hasAcc(ann,a_10) ~ val(true).
+client(john) := true. 
+hasAcc(john,a_10) ~ val(true).
+client(bob) := true. 
+hasAcc(bob,a_10) ~ val(true).
+client(carl) := true. 
+hasAcc(carl,a_11) ~ val(true).
+client(rose) := true. 
+hasAcc(rose,a_12) ~ val(true).
+client(mark) := true. 
+hasAcc(mark,a_13) ~ val(true).
+client(steve) := true. 
+hasAcc(steve,a_14) ~ val(true).
+client(ritu) := true. 
+hasAcc(ritu,a_15) ~ val(true).
+client(amit) := true. 
+hasAcc(amit,a_16) ~ val(true).
+client(nitesh) := true. 
+hasAcc(nitesh,a_17) ~ val(true).
+client(jessa) := true. 
+hasAcc(jessa,a_18) ~ val(true).
+client(mohit) := true. 
+hasAcc(mohit,a_18) ~ val(true).
+client(robin) := true. 
+hasAcc(robin,a_19) ~ val(true).
+client(dris) := true. 
+hasAcc(dris,a_19) ~ val(true).
+client(chi) := true. 
+hasAcc(chi,a_19) ~ val(true).
+account(a_10) := true. 
+hasLoan(a_10,l_20) ~ val(true).
+account(a_11) := true. 
+hasLoan(a_11,l_21) ~ val(true).
+account(a_12) := true. 
+hasLoan(a_12,l_22) ~ val(true).
+account(a_13) := true. 
+hasLoan(a_13,l_23) ~ val(true).
+account(a_14) := true. 
+hasLoan(a_14,l_24) ~ val(true).
+account(a_15) := true. 
+hasLoan(a_15,l_25) ~ val(true).
+account(a_16) := true. 
+hasLoan(a_16,l_26) ~ val(true).
+account(a_17) := true. 
+hasLoan(a_17,l_27) ~ val(true).
+account(a_18) := true. 
+hasLoan(a_18,l_28) ~ val(true).
+account(a_19) := true. 
+hasLoan(a_19,l_29) ~ val(true).
+loan(l_20) := true. 
+loan(l_21) := true. 
+loan(l_22) := true. 
+loan(l_23) := true. 
+loan(l_24) := true. 
+loan(l_25) := true. 
+loan(l_26) := true. 
+loan(l_27) := true. 
+loan(l_28) := true. 
+loan(l_29) := true. 
+loan(l_30) := true. 
+loan(l_31) := true. 
+loan(l_32) := true. 
+loan(l_33) := true. 
+loan(l_34) := true. 
+loan(l_35) := true. 
+loan(l_36) := true. 
 
 %Learned Distributional Clauses 
-savings(Account) ~ gaussian(4254.6,2297792.71111) := true.
-freq(Account) ~ finite([Probability:high,Probability2:low]) := savings(Account)~=X1_M, logistic([0.029202652089567977, -138.90846623285694],[X1_M],Probability2), Probability is 1.0-Probability2.
-freq(Account) ~ finite([0.6:high,0.4:low]) := true.
-age(Client) ~ gaussian(24.6,13.3) := findall_forward(X2_M,(hasAcc(Client,Account_M)~=true,freq(Account_M)~=X2_M),X_T_3),minMod(X_T_3)~=low.
-age(Client) ~ gaussian(43.6666666667,145.466666667) := findall_forward(X2_M,(hasAcc(Client,Account_M)~=true,freq(Account_M)~=X2_M),X_T_4),minMod(X_T_4)~=high.
 age(Client) ~ gaussian(35.0,177.2) := true.
-creditScore(Client) ~ gaussian(Mean,6361.365719523376) := age(Client)~=X4_M,findall_forward(X2_M,(hasAcc(Client,Account_M)~=true,freq(Account_M)~=X2_M),X_T_12),minMod(X_T_12)~=high,getMean([X4_M],[10.417048579285058,138.45554537121916],Mean).
+creditScore(Client) ~ gaussian(Mean,5942.603266090301) := age(Client)~=X1_M,getMean([X1_M],[13.00672430355427,7.857829010566945],Mean).
+creditScore(Client) ~ gaussian(495.25,40836.9166667) := \+age(Client)~=X1_M.
 creditScore(Client) ~ gaussian(497.0,33740.3333333) := true.
-loanAmt(Loan) ~ gaussian(Mean,168.58985572517446) := findall_forward(X1_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X1_M),X_T_1_Temp),avg(X_T_1_Temp)~=X_T_1,findall_forward(X2_M,(hasLoan(Account_M_1,Loan)~=true,freq(Account_M_1)~=X2_M),X_T_10),minMod(X_T_10)~=high,getMean([X_T_1],[9.960409336974106,86.87358176716589],Mean).
-loanAmt(Loan) ~ gaussian(52000.0,558666666.667) := findall_forward(X1_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X1_M),X_T_2),\+avg(X_T_2)~=_.
+savings(Account) ~ gaussian(Mean,2429863.4089937364) := findall_forward(X1_M,(hasAcc(Client_M,Account)~=true,age(Client_M)~=X1_M),X_T_1_Temp),avg(X_T_1_Temp)~=X_T_1,getMean([X_T_1],[-42.26936203728013,5792.5480441060645],Mean).
+savings(Account) ~ gaussian(4254.6,2297792.71111) := true.
+freq(Account) ~ finite([Probability:high,Probability2:low]) := savings(Account)~=X4_M, logistic([0.029202652089567977, -138.90846623285694],[X4_M],Probability2), Probability is 1.0-Probability2.
+freq(Account) ~ finite([0.6:high,0.4:low]) := true.
+loanAmt(Loan) ~ gaussian(Mean,168.58985572517446) := findall_forward(X4_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X4_M),X_T_1_Temp),avg(X_T_1_Temp)~=X_T_1,findall_forward(X5_M,(hasLoan(Account_M_1,Loan)~=true,freq(Account_M_1)~=X5_M),X_T_9),minMod(X_T_9)~=high,getMean([X_T_1],[9.960409336974106,86.87358176716589],Mean).
+loanAmt(Loan) ~ gaussian(Mean,88.96482311122391) := findall_forward(X4_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X4_M),X_T_1_Temp),avg(X_T_1_Temp)~=X_T_1,findall_forward(X5_M,(hasLoan(Account_M_1,Loan)~=true,freq(Account_M_1)~=X5_M),X_T_10),minMod(X_T_10)~=low,getMean([X_T_1],[9.9423132316986,284.4729298824823],Mean).
+loanAmt(Loan) ~ gaussian(52000.0,558666666.667) := findall_forward(X4_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X4_M),X_T_2),\+avg(X_T_2)~=_.
 loanAmt(Loan) ~ gaussian(46812.5,382829166.667) := true.
-status(Loan) ~ finite([Probability1:appr,Probability2:decl,Probability3:pend]) := findall_forward(X1_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X1_M),X_T_1_Temp),avg(X_T_1_Temp)~=X_T_1, softmax([[-0.059928311835396424,212.7584889008575],[0.05575380542759868,-216.21477724047696],[0.004174506330970806,3.4562883396198543]],[X_T_1],[Probability1,Probability2,Probability3]).
-status(Loan) ~ finite([0.42857142857142855:decl,0.42857142857142855:pend,0.14285714285714285:appr]) := findall_forward(X1_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X1_M),X_T_2),\+avg(X_T_2)~=_.
+status(Loan) ~ finite([Probability1:appr,Probability2:decl,Probability3:pend]) := findall_forward(X4_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X4_M),X_T_1_Temp),avg(X_T_1_Temp)~=X_T_1, softmax([[-0.059928311835396424,212.7584889008575],[0.05575380542759868,-216.21477724047696],[0.004174506330970806,3.4562883396198543]],[X_T_1],[Probability1,Probability2,Probability3]).
+status(Loan) ~ finite([0.42857142857142855:decl,0.42857142857142855:pend,0.14285714285714285:appr]) := findall_forward(X4_M,(hasLoan(Account_M,Loan)~=true,savings(Account_M)~=X4_M),X_T_2),\+avg(X_T_2)~=_.
 status(Loan) ~ finite([0.4375:decl,0.3125:pend,0.25:appr]) := true.
 
 

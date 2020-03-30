@@ -53,127 +53,87 @@ avg(X, P, Avg) :- findall(X,P,L), length(L,Cnt), listavg(L, Cnt, Avg).
 
 
 %%%%%%%%%%% Declarative Bias states here %%%%%%%%%%%%
-:- discontiguous account/1.
-:- discontiguous savings/2.
-:- discontiguous freq/2.
-:- discontiguous hasLoan/3.
 :- discontiguous client/1.
 :- discontiguous age/2.
 :- discontiguous creditScore/2.
 :- discontiguous hasAcc/3.
+:- discontiguous account/1.
+:- discontiguous savings/2.
+:- discontiguous freq/2.
+:- discontiguous hasLoan/3.
 :- discontiguous loan/1.
 :- discontiguous loanAmt/2.
 :- discontiguous status/2.
 
 %Types
-base(account(account)).
-base(savings(account,x1)).
-base(freq(account,x2)).
-base(hasLoan(account,loan,x3)).
 base(client(client)).
-base(age(client,x4)).
-base(creditScore(client,x5)).
-base(hasAcc(client,account,x6)).
+base(age(client,x1)).
+base(creditScore(client,x2)).
+base(hasAcc(client,account,x3)).
+base(account(account)).
+base(savings(account,x4)).
+base(freq(account,x5)).
+base(hasLoan(account,loan,x6)).
 base(loan(loan)).
 base(loanAmt(loan,x7)).
 base(status(loan,x8)).
 
 %Modes
-mode(savings, none, freq(+,-)).
-mode(savings, avg, (hasLoan(+,-,true),loanAmt(+,-))).
-mode(savings, minMod, (hasLoan(+,-,true),status(+,-))).
-mode(savings, maxMod, (hasLoan(+,-,true),status(+,-))).
-mode(savings, avg, (hasAcc(-,+,true),age(+,-))).
-mode(savings, avg, (hasAcc(-,+,true),creditScore(+,-))).
-mode(freq, none, savings(+,-)).
-mode(freq, avg, (hasLoan(+,-,true),loanAmt(+,-))).
-mode(freq, minMod, (hasLoan(+,-,true),status(+,-))).
-mode(freq, maxMod, (hasLoan(+,-,true),status(+,-))).
-mode(freq, avg, (hasAcc(-,+,true),age(+,-))).
-mode(freq, avg, (hasAcc(-,+,true),creditScore(+,-))).
-mode(age, none, creditScore(+,-)).
 mode(age, avg, (hasAcc(+,-,true),savings(+,-))).
 mode(age, minMod, (hasAcc(+,-,true),freq(+,-))).
 mode(age, maxMod, (hasAcc(+,-,true),freq(+,-))).
-mode(creditScore, none, age(+,-)).
+mode(age, none, creditScore(+,-)).
 mode(creditScore, avg, (hasAcc(+,-,true),savings(+,-))).
 mode(creditScore, minMod, (hasAcc(+,-,true),freq(+,-))).
 mode(creditScore, maxMod, (hasAcc(+,-,true),freq(+,-))).
-mode(loanAmt, none, status(+,-)).
+mode(creditScore, none, age(+,-)).
+mode(savings, avg, (hasAcc(-,+,true),age(+,-))).
+mode(savings, avg, (hasAcc(-,+,true),creditScore(+,-))).
+mode(savings, avg, (hasLoan(+,-,true),loanAmt(+,-))).
+mode(savings, minMod, (hasLoan(+,-,true),status(+,-))).
+mode(savings, maxMod, (hasLoan(+,-,true),status(+,-))).
+mode(savings, none, freq(+,-)).
+mode(freq, avg, (hasAcc(-,+,true),age(+,-))).
+mode(freq, avg, (hasAcc(-,+,true),creditScore(+,-))).
+mode(freq, avg, (hasLoan(+,-,true),loanAmt(+,-))).
+mode(freq, minMod, (hasLoan(+,-,true),status(+,-))).
+mode(freq, maxMod, (hasLoan(+,-,true),status(+,-))).
+mode(freq, none, savings(+,-)).
 mode(loanAmt, avg, (hasLoan(-,+,true),savings(+,-))).
 mode(loanAmt, minMod, (hasLoan(-,+,true),freq(+,-))).
 mode(loanAmt, maxMod, (hasLoan(-,+,true),freq(+,-))).
-mode(status, none, loanAmt(+,-)).
+mode(loanAmt, none, status(+,-)).
 mode(status, avg, (hasLoan(-,+,true),savings(+,-))).
 mode(status, minMod, (hasLoan(-,+,true),freq(+,-))).
 mode(status, maxMod, (hasLoan(-,+,true),freq(+,-))).
+mode(status, none, loanAmt(+,-)).
 
 %Declare the type of random variables
-thres(savings, 2, continuous, []).
-thres(freq, 2, discrete, [low,high]).
-thres(hasLoan, 3, continuous, []).
 thres(age, 2, continuous, []).
 thres(creditScore, 2, continuous, []).
 thres(hasAcc, 3, continuous, []).
+thres(savings, 2, continuous, []).
+thres(freq, 2, discrete, [high,low]).
+thres(hasLoan, 3, continuous, []).
 thres(loanAmt, 2, continuous, []).
-thres(status, 2, discrete, [pend,appr,decl]).
+thres(status, 2, discrete, [appr,decl,pend]).
 
 %List the name of all random variables
-randomVariableNames([savings,freq,hasLoan,age,creditScore,hasAcc,loanAmt,status]).
+randomVariableNames([age,creditScore,hasAcc,savings,freq,hasLoan,loanAmt,status]).
 
 %Rank declaration
-rank([savings,freq,hasLoan,age,creditScore,hasAcc,loanAmt,status]).
+rank([age,creditScore,hasAcc,savings,freq,hasLoan,loanAmt,status]).
 
 %Target
-learn(savings, 2, 2, continuous).
-learn(freq, 2, 2, discrete).
 learn(age, 2, 2, continuous).
 learn(creditScore, 2, 2, continuous).
+learn(savings, 2, 2, continuous).
+learn(freq, 2, 2, discrete).
 learn(loanAmt, 2, 2, continuous).
 learn(status, 2, 2, discrete).
 %%%%%%%%%%% Declarative Bias ends here %%%%%%%%%%%%
 
 %Train data
-account(a_10).
-savings(a_10,2000).
-freq(a_10,high).
-hasLoan(a_10,l_20,true).
-account(a_11).
-savings(a_11,2502).
-freq(a_11,high).
-hasLoan(a_11,l_21,true).
-account(a_12).
-savings(a_12,3001).
-freq(a_12,high).
-hasLoan(a_12,l_22,true).
-account(a_13).
-savings(a_13,3505).
-freq(a_13,high).
-hasLoan(a_13,l_23,true).
-account(a_14).
-savings(a_14,4009).
-freq(a_14,high).
-hasLoan(a_14,l_24,true).
-account(a_15).
-savings(a_15,4510).
-freq(a_15,high).
-hasLoan(a_15,l_25,true).
-account(a_16).
-savings(a_16,5001).
-freq(a_16,low).
-hasLoan(a_16,l_26,true).
-account(a_17).
-savings(a_17,5503).
-freq(a_17,low).
-hasLoan(a_17,l_27,true).
-account(a_18).
-savings(a_18,6005).
-freq(a_18,low).
-hasLoan(a_18,l_28,true).
-account(a_19).
-savings(a_19,6510).
-freq(a_19,low).
-hasLoan(a_19,l_29,true).
 client(ann).
 age(ann,43).
 creditScore(ann,600).
@@ -228,6 +188,46 @@ hasAcc(dris,a_19,true).
 client(chi).
 age(chi,19).
 hasAcc(chi,a_19,true).
+account(a_10).
+savings(a_10,2000).
+freq(a_10,high).
+hasLoan(a_10,l_20,true).
+account(a_11).
+savings(a_11,2502).
+freq(a_11,high).
+hasLoan(a_11,l_21,true).
+account(a_12).
+savings(a_12,3001).
+freq(a_12,high).
+hasLoan(a_12,l_22,true).
+account(a_13).
+savings(a_13,3505).
+freq(a_13,high).
+hasLoan(a_13,l_23,true).
+account(a_14).
+savings(a_14,4009).
+freq(a_14,high).
+hasLoan(a_14,l_24,true).
+account(a_15).
+savings(a_15,4510).
+freq(a_15,high).
+hasLoan(a_15,l_25,true).
+account(a_16).
+savings(a_16,5001).
+freq(a_16,low).
+hasLoan(a_16,l_26,true).
+account(a_17).
+savings(a_17,5503).
+freq(a_17,low).
+hasLoan(a_17,l_27,true).
+account(a_18).
+savings(a_18,6005).
+freq(a_18,low).
+hasLoan(a_18,l_28,true).
+account(a_19).
+savings(a_19,6510).
+freq(a_19,low).
+hasLoan(a_19,l_29,true).
 loan(l_20).
 loanAmt(l_20,20000).
 status(l_20,appr).
