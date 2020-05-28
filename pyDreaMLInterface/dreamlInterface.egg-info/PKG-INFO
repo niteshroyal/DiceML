@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: dreamlInterface
+Version: 0.1
+Summary: Multi-relational learning
+Home-page: https://github.com/niteshroyal/DreaML
+Author: Nitesh Kumar
+Author-email: niteshroyal.30@gmail.com
+License: UNKNOWN
+Description: # DreaMLInterface
+        * This interface allows other softwares to call DreaML. 
+        
+        Installation
+        ============
+        ```
+        1. Install DreaML following the steps in the file : ../README.md
+        
+        1. Build PyDC executable file and copy to the 'core' folder
+           $ cd yapInterfaceForPython3
+           $ python3 setup.py build_ext --inplace
+           $ mv yapWrapper.cpython-35m-x86_64-linux-gnu.so ../yapWrapper.so
+        ```
+           	
+        Execution 
+        =========
+        
+        1. An example of calling DreaML is shown in the file: DreaMLInterface.py
+        
+        ```
+           $ python3 DreaMLInterface.py
+        
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
