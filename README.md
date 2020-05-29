@@ -61,3 +61,55 @@ Execution
      f.write(rule + '\n')
  f.close()
 ```
+
+
+# py_dreaml_interface
+* Package allows to pass a set of related tables to the DreaML
+* The package automatically generates declarative bias
+* Calls DreaML to learn DC program
+* Query the learned DC Program
+
+Installation
+============
+
+1. First install Yap Prolog Wrapper
+   
+   $ cd yapInterfaceForPython3
+   $ python3 setup.py build_ext
+   $ sudo python3.7 setup.py install
+
+
+2. Installing py_dreaml_interface
+
+   ## From the main folder of DreaML
+   $ pip3 install .
+
+3. Add environment variables 
+
+   $ vim ~/.bashrc
+   
+   ## Add following lines in the 'bashrc' file
+   
+   ## Path to Python 2
+   export DREAML_PYTHON2_BIN="/usr/bin/python2.7"
+   
+   ## Path to the main DreaML folder
+   export DREAML_PATH="/home/nitesh/eclipse-workspace/DreaML"
+   
+   ## Path Python 2 lib and path 2 DreaML 
+   export PYTHONPATH="/usr/lib/python2.7:/home/nitesh/eclipse-workspace/DreaML"
+
+
+Execution 
+=========
+
+1. See an example
+   $ vim py_dreaml_interface/test.py
+    
+
+
+
+
+
+
+

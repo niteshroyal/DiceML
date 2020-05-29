@@ -412,12 +412,3 @@ class InterfaceDCQuery(object):
         else:
             pass
         return prediction
-        
-    
-    
-    
-    
-    
-    
-    
-    

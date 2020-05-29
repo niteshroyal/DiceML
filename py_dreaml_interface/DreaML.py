@@ -4,8 +4,8 @@ Created on Jan 30, 2020
 @author: nitesh
 '''
 
-import subprocess, pickle
-from .InterfaceDCQuery  import InterfaceDCQuery
+import subprocess, pickle, os
+from .InterfaceDCQuery import InterfaceDCQuery
 
 PROLOG_ADDITIONAL = '''%%% -*- Mode: Prolog; -*-
 %%% This file is used in deterministic case.
@@ -188,11 +188,14 @@ class Functor(object):
 
 class DreaML(object):
     def __init__(self):
-        self.prologFileName = 'prologData.pl'
-        self.dcFileName = 'dcData.pl'
-        self.learnedDCRules = 'learnedDCRules.pl'
-        self.tempDependencyFile = 'tempDependency.pkl'
-        self.dcLearner = 'InvokeDCLearner.py'
+        self.my_env = os.environ.copy()
+        # self.dreamlPath = '/home/nitesh/eclipse-workspace/DistributionalProgramSynthesis'
+        self.dreamlPath = self.my_env['DREAML_PATH']
+        self.prologFileName = os.path.join(self.dreamlPath, 'temp', 'prologData.pl')
+        self.dcFileName = os.path.join(self.dreamlPath, 'temp', 'dcData.pl')
+        self.learnedDCRules = os.path.join(self.dreamlPath, 'temp', 'learnedDCRules.pl')
+        self.tempDependencyFile = os.path.join(self.dreamlPath, 'temp', 'tempDependency.pkl')
+        self.dcLearner = os.path.join(self.dreamlPath, 'core', 'InvokeDCLearner.py')
         self.prologFacts = []
         self.dcRelationalStructure = []
         self.currentNumber = 0
@@ -259,13 +262,25 @@ class DreaML(object):
             f.write(item)
             f.write('\n')
         f.close()
-    
+
     def learn(self):
         try:
-            path = self.python2env['lib'] + ':../'
-            python2_env = {"PYTHONPATH": path}
-            command = [self.python2env['bin'], self.dcLearner, self.prologFileName, self.learnedDCRules, self.tempDependencyFile]
-            process = subprocess.run(command, env=python2_env, check=True, stdout=subprocess.PIPE, universal_newlines=True)
+            # python2_bin = '/usr/bin/python'
+            python2_bin = self.my_env['DREAML_PYTHON2_BIN']
+
+            #python2_lib = '/usr/lib/python2.7:/home/nitesh/eclipse-workspace/DistributionalProgramSynthesis'
+            python2_lib = self.my_env['PYTHONPATH']
+
+            # path = self.python2env['lib'] + ':../'
+            # python2_env = {"PYTHONPATH": path}
+            # command = [self.python2env['bin'], self.dcLearner, self.prologFileName, self.learnedDCRules, self.tempDependencyFile]
+            command = [python2_bin, self.dcLearner, self.prologFileName, self.learnedDCRules,
+                       self.tempDependencyFile]
+
+            # process = subprocess.run(command, env=python2_env, check=True, stdout=subprocess.PIPE, universal_newlines=True)
+            process = subprocess.run(command, env=self.my_env, check=True, stdout=subprocess.PIPE,
+                                     universal_newlines=True)
+
             output = process.stdout
             print(output)
         except:
