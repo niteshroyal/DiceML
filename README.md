@@ -73,19 +73,22 @@ Installation
 ============
 
 1. First install Yap Prolog Wrapper
-   
+```
    $ cd yapInterfaceForPython3
    $ python3 setup.py build_ext
    $ sudo python3.7 setup.py install
+```
 
 
 2. Installing py_dreaml_interface
-
+```
    ## From the main folder of DreaML
    $ pip3 install .
+```
 
 3. Add environment variables 
 
+```
    $ vim ~/.bashrc
    
    ## Add following lines in the 'bashrc' file
@@ -98,13 +101,16 @@ Installation
    
    ## Path Python 2 lib and path 2 DreaML 
    export PYTHONPATH="/usr/lib/python2.7:/home/nitesh/eclipse-workspace/DreaML"
-
+```
 
 Execution 
 =========
 
+
 1. See an example
+```
    $ vim py_dreaml_interface/test.py
+```
     
 
 
