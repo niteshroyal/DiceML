@@ -11,6 +11,8 @@ if __name__ == '__main__':
     ##     2) Columns of type 'continuous' or 'discrete' can be predicted
     ##     3) If a column contains foreign key then put 'foreignKey' as type
     ##     4) If a column contains strings, text etc. then put 'unsupported' as type. (Note: keys and strings are not predicted currently)
+    ##     5) Two tables containing the same column name is currently not supported
+    ##     6) The same column can not contain both 'primaryKey' and 'foreignKey'. (This exceptional case is not supported currently)
     schema = {
         'account': [{'header': 'acc_id', 'type': 'primaryKey'}, {'header': 'savings', 'type': 'continuous'},
                     {'header': 'freq', 'type': 'discrete'}, {'header': 'hasLoan', 'type': 'foreignKey'}],
