@@ -109,7 +109,7 @@ Execution
 
 1. See an example
 ```
-   $ vim py_dreaml_interface/test.py
+   $ vim py_dreaml_interface/example.py
 ```
     
 
