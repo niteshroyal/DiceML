@@ -63,7 +63,7 @@ Execution
 ```
 
 
-# py_dreaml_interface
+# DreaML interface (py_dreaml_interface)
 * Package allows to pass a set of related tables to the DreaML
 * The package automatically generates declarative bias
 * Calls DreaML to learn DC program
