@@ -8,13 +8,28 @@ The code is in beta, if you need help or find a bug please write an [issue](http
 Installation
 ============
 ```
-1. Install Yap Prolog following steps here: https://github.com/davidenitti/DC
+1. Install dependencies
+   $ apt install build-essential pkg-config libgsl-dev libreadline-dev libboost-all-dev python2-dev
 
-2. Install python packages: Numpy, Sklearn, Cython
+2. Install Yap Prolog
+   $ tar -xzvf yap-6.2.2.1.tar.gz
+   $ cd yap-6.2.2
+   $ mkdir arch
+   $ cd arch
+   $ ../configure --enable-tabling=yes --enable-dynamic-loading
+   $ make
+   $ sudo make install
+   $ sudo make install_library
 
-3. Build PyDC executable file and copy to the 'core' folder
+3. Install DC that is available in the main DiceML folder
+   $ cd DC
+   $ sh make.sh
+
+4. Install Numpy, Sklearn, Cython in python2
+
+5. Build PyDC executable file and copy to the 'core' folder
    $ cd yapInterface
-   $ python setup.py build_ext --inplace
+   $ python2 setup.py build_ext --inplace
    $ mv yapWrapper.so ../core/
 ```
    	
@@ -63,10 +78,10 @@ Execution
 ```
 
 
-# DreaML interface (py_dreaml_interface)
-* Package allows to pass a set of related tables to the DreaML
+# DiceML interface (py_dreaml_interface)
+* Package allows to pass a set of related tables to the DiceML
 * The package automatically generates declarative bias
-* Calls DreaML to learn DC program
+* Calls DiceML to learn DC program
 * Query the learned DC Program
 
 Installation
@@ -76,13 +91,13 @@ Installation
 ```
    $ cd yapInterfaceForPython3
    $ python3 setup.py build_ext
-   $ sudo python3.7 setup.py install
+   $ sudo python3 setup.py install
 ```
 
 
 2. Installing py_dreaml_interface
 ```
-   ## From the main folder of DreaML
+   ## From the main folder of DiceML
    $ pip3 install .
 ```
 
@@ -96,11 +111,11 @@ Installation
    ## Path to Python 2
    export DREAML_PYTHON2_BIN="/usr/bin/python2.7"
    
-   ## Path to the main DreaML folder
-   export DREAML_PATH="/home/nitesh/eclipse-workspace/DreaML"
+   ## Path to the (your) main DiceML folder
+   export DREAML_PATH="/home/nitesh/eclipse-workspace/DiceML"
    
-   ## Path Python 2 lib and path 2 DreaML 
-   export PYTHONPATH="/usr/lib/python2.7:/home/nitesh/eclipse-workspace/DreaML"
+   ## Path to main DiceML folder
+   export PYTHONPATH="/home/nitesh/eclipse-workspace/DiceML"
 ```
 
 Execution 
@@ -110,6 +125,11 @@ Execution
 1. See an example
 ```
    $ vim py_dreaml_interface/example.py
+```
+
+2. Run the example
+```
+   $ python3 py_dreaml_interface/example.py
 ```
     
 
