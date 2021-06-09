@@ -25,9 +25,22 @@ Installation
    $ cd DC
    $ sh make.sh
 
-4. Install Numpy, Sklearn, Cython in python2
+4. Check if DC is correctly installed or not
 
-5. Build PyDC executable file and copy to the 'core' folder
+   $ sh test.sh
+
+   Expected Output:
+
+	Testing example1.pl...
+	Absolute error drawn(1) ~= 1: 0.00404777777777715
+	Absolute error drawn(1) ~= 2: 0.00110174603175042
+	Absolute error drawn(1) ~= 3: 0.000147500000002382
+	Absolute error average g ~ Gaussian(0,0.1): 0.00116244998571192
+	% 0.179 CPU in 0.183 seconds ( 97% CPU)
+
+5. Install Numpy, Sklearn, Cython in python2
+
+6. Build PyDC executable file and copy to the 'core' folder
    $ cd yapInterface
    $ python2 setup.py build_ext --inplace
    $ mv yapWrapper.so ../core/
