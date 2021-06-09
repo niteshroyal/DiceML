@@ -87,7 +87,9 @@ Execution
 Installation
 ============
 
-1. First install Yap Prolog Wrapper
+1. Install Cython package in python3
+
+2. First install Yap Prolog Wrapper
 ```
    $ cd yapInterfaceForPython3
    $ python3 setup.py build_ext
@@ -95,13 +97,13 @@ Installation
 ```
 
 
-2. Installing py_dreaml_interface
+3. Installing py_dreaml_interface
 ```
    ## From the main folder of DiceML
    $ pip3 install .
 ```
 
-3. Add environment variables 
+4. Add environment variables 
 
 ```
    $ vim ~/.bashrc
